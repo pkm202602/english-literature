@@ -1,0 +1,1339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Poets Laureate of the United Kingdom: The Complete Guide</title>
+    <style>
+        /* ----- Reset & Base ----- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background: #f6f2ed;
+            color: #2d2a24;
+            padding: 2rem 1rem;
+            line-height: 1.8;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            background: #fefcf9;
+            border-radius: 2rem;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+            padding: 3rem 2.8rem;
+        }
+
+        /* ----- Header ----- */
+        .header {
+            text-align: center;
+            border-bottom: 3px solid #e5ddd4;
+            padding-bottom: 2rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .header h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: #1e2a3a;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.5rem;
+        }
+
+        .header h1 span {
+            color: #b8860b;
+        }
+
+        .header .sub {
+            font-size: 1.1rem;
+            color: #5f5546;
+            font-style: italic;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* ----- Definition Box ----- */
+        .definition-box {
+            background: #f5efe9;
+            border-radius: 1.2rem;
+            padding: 1.8rem 2.2rem;
+            margin-bottom: 2.8rem;
+            border-left: 6px solid #b8860b;
+        }
+
+        .definition-box h2 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #1e2a3a;
+            margin-bottom: 0.8rem;
+        }
+
+        .definition-box h2 i {
+            color: #b8860b;
+            margin-right: 0.5rem;
+        }
+
+        .definition-box p {
+            font-size: 1.05rem;
+            color: #2d2a24;
+            margin-bottom: 0.6rem;
+        }
+
+        .definition-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        .definition-box .highlight {
+            color: #b8860b;
+            font-weight: 600;
+        }
+
+        /* ----- Stats Bar ----- */
+        .stats-bar {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem 3rem;
+            background: #faf7f3;
+            border-radius: 1.2rem;
+            padding: 1.2rem 2rem;
+            margin-bottom: 2.8rem;
+            border: 1px solid #e5ddd4;
+        }
+
+        .stats-bar .stat {
+            text-align: center;
+        }
+
+        .stats-bar .stat .number {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #1e2a3a;
+            display: block;
+        }
+
+        .stats-bar .stat .label {
+            font-size: 0.85rem;
+            color: #7f7466;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        /* ----- Poet Entry ----- */
+        .poet-entry {
+            border: 1.5px solid #e5ddd4;
+            border-radius: 1.2rem;
+            padding: 1.8rem 2rem;
+            margin-bottom: 2rem;
+            background: #fcfaf8;
+            transition: box-shadow 0.2s ease;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        .poet-entry:hover {
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
+        }
+
+        .poet-entry .poet-main {
+            flex: 1;
+            min-width: 280px;
+        }
+
+        .poet-entry .poet-portrait {
+            flex: 0 0 140px;
+            text-align: center;
+        }
+
+        .poet-entry .poet-portrait img {
+            width: 130px;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 0.6rem;
+            border: 2px solid #e5ddd4;
+            background: #f5efe9;
+            transition: transform 0.2s;
+        }
+
+        .poet-entry .poet-portrait img:hover {
+            transform: scale(1.03);
+        }
+
+        .poet-entry .poet-portrait .wiki-link-img {
+            display: block;
+            margin-top: 0.3rem;
+            font-size: 0.8rem;
+            color: #b8860b;
+            text-decoration: none;
+        }
+
+        .poet-entry .poet-portrait .wiki-link-img:hover {
+            text-decoration: underline;
+        }
+
+        .poet-entry .poet-portrait .no-image {
+            width: 130px;
+            height: 160px;
+            border-radius: 0.6rem;
+            border: 2px solid #e5ddd4;
+            background: #f0ebe5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            color: #b8860b;
+            font-weight: 300;
+        }
+
+        .poet-entry .poet-header {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: baseline;
+            gap: 0.5rem 1.2rem;
+            border-bottom: 2px solid #e5ddd4;
+            padding-bottom: 0.6rem;
+            margin-bottom: 1rem;
+        }
+
+        .poet-entry .poet-header .name {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #1e2a3a;
+        }
+
+        .poet-entry .poet-header .name a {
+            color: #1e2a3a;
+            text-decoration: none;
+        }
+
+        .poet-entry .poet-header .name a:hover {
+            color: #b8860b;
+            text-decoration: underline;
+        }
+
+        .poet-entry .poet-header .lifespan {
+            font-size: 1rem;
+            color: #7f7466;
+        }
+
+        .poet-entry .poet-header .term {
+            font-size: 0.9rem;
+            background: #e5ddd4;
+            padding: 0.1rem 0.8rem;
+            border-radius: 30px;
+            color: #2d2a24;
+        }
+
+        .poet-entry .poet-header .badge {
+            font-size: 0.75rem;
+            background: #b8860b;
+            color: #fff;
+            padding: 0.1rem 0.8rem;
+            border-radius: 30px;
+            letter-spacing: 0.04em;
+        }
+
+        .poet-entry .poet-header .badge.first {
+            background: #1e3a5f;
+        }
+
+        .poet-entry .poet-header .badge.last {
+            background: #7c3aed;
+        }
+
+        .poet-entry .bio-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.3rem 2rem;
+            margin: 0.8rem 0;
+        }
+
+        .poet-entry .bio-grid .bio-item {
+            display: flex;
+            align-items: baseline;
+            gap: 0.4rem;
+            font-size: 0.95rem;
+            padding: 0.1rem 0;
+        }
+
+        .poet-entry .bio-grid .bio-item .bio-label {
+            font-weight: 600;
+            color: #4a4036;
+            min-width: 90px;
+        }
+
+        .poet-entry .bio-grid .bio-item .bio-value {
+            color: #2d2a24;
+        }
+
+        .poet-entry .bio-grid .bio-item .bio-value a {
+            color: #b8860b;
+            text-decoration: none;
+        }
+
+        .poet-entry .bio-grid .bio-item .bio-value a:hover {
+            text-decoration: underline;
+        }
+
+        .poet-entry .poet-works {
+            margin-top: 0.8rem;
+            padding-top: 0.8rem;
+            border-top: 1px dashed #ddd6ce;
+        }
+
+        .poet-entry .poet-works .works-label {
+            font-weight: 600;
+            color: #4a4036;
+            font-size: 0.95rem;
+        }
+
+        .poet-entry .poet-works .works-list {
+            font-size: 0.95rem;
+            color: #2d2a24;
+        }
+
+        .poet-entry .poet-note {
+            margin-top: 0.6rem;
+            font-size: 0.9rem;
+            color: #7f7466;
+            font-style: italic;
+            background: #f5efe9;
+            padding: 0.4rem 1rem;
+            border-radius: 0.6rem;
+        }
+
+        /* ----- Responsive ----- */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1.8rem 1.2rem;
+                border-radius: 1.5rem;
+            }
+
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .poet-entry {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .poet-entry .poet-portrait {
+                flex: 0 0 auto;
+                order: -1;
+            }
+
+            .poet-entry .poet-main {
+                min-width: 0;
+                width: 100%;
+            }
+
+            .poet-entry .bio-grid {
+                grid-template-columns: 1fr;
+                gap: 0.1rem;
+            }
+
+            .poet-entry .poet-header .name {
+                font-size: 1.4rem;
+            }
+
+            .stats-bar {
+                gap: 1rem;
+            }
+
+            .stats-bar .stat .number {
+                font-size: 1.4rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 0.8rem;
+            }
+            .container {
+                padding: 1.2rem 0.8rem;
+            }
+            .definition-box {
+                padding: 1.2rem 1rem;
+            }
+            .poet-entry {
+                padding: 1.2rem 1rem;
+            }
+            .poet-entry .poet-portrait img,
+            .poet-entry .poet-portrait .no-image {
+                width: 100px;
+                height: 130px;
+            }
+        }
+
+        /* ----- Footer ----- */
+        .footer-note {
+            margin-top: 3rem;
+            padding-top: 1.8rem;
+            border-top: 2px solid #e5ddd4;
+            font-size: 0.9rem;
+            color: #7f7466;
+            text-align: center;
+        }
+
+        .footer-note a {
+            color: #b8860b;
+            text-decoration: none;
+        }
+
+        .footer-note a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- HEADER -->
+    <div class="header">
+        <h1>Poets Laureate <span>of the</span><br />United Kingdom</h1>
+        <p class="sub">The Complete Guide — from the first appointment in 1668 to the present day</p>
+    </div>
+
+    <!-- DEFINITION & HISTORY -->
+    <div class="definition-box">
+        <h2><i>&#9733;</i> What is a Poet Laureate?</h2>
+        <p>
+            The <span class="highlight">Poet Laureate</span> of the United Kingdom is an honorary position
+            appointed by the monarch, currently on the advice of the Prime Minister.
+            The title originates from the ancient Greek and Roman tradition of crowning
+            poets with a wreath of laurel — a symbol of achievement and honour.
+        </p>
+        <p>
+            <strong>Origins:</strong> The modern laureateship began in <span class="highlight">1616</span>,
+            when King James I granted a pension to <strong>Ben Jonson</strong>.
+            However, the first <em>official</em> Poet Laureate was <strong>John Dryden</strong>,
+            appointed by King Charles II in <span class="highlight">1668</span>.
+            The position was originally held for life and came with a salary of £200 per year,
+            plus a butt (126 gallons) of Canary wine — a tradition revived by Ted Hughes
+            with 720 bottles of sherry.
+        </p>
+        <p>
+            <strong>Duties:</strong> Historically, the Poet Laureate was expected to write verse
+            for royal birthdays, coronations, and other national occasions.
+            Today, the role is largely honorary, with the holder free to decide when and
+            what to write for significant national events.
+        </p>
+        <p>
+            <strong>Modern Era:</strong> Since <span class="highlight">1999</span>,
+            the appointment has been for a fixed <strong>ten-year term</strong>,
+            rather than for life. Andrew Motion was the first to serve a fixed term,
+            and Carol Ann Duffy was the first woman, first Scot, and first openly
+            LGBTQ+ person to hold the role.
+        </p>
+    </div>
+
+    <!-- STATS BAR -->
+    <div class="stats-bar">
+        <div class="stat">
+            <span class="number">22</span>
+            <span class="label">Poets Laureate</span>
+        </div>
+        <div class="stat">
+            <span class="number">1668</span>
+            <span class="label">First Appointment</span>
+        </div>
+        <div class="stat">
+            <span class="number">4</span>
+            <span class="label">Poets Who Declined</span>
+        </div>
+        <div class="stat">
+            <span class="number">10</span>
+            <span class="label">Year Term (since 1999)</span>
+        </div>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- 1. JOHN DRYDEN                             -->
+    <!-- ========================================== -->
+    <div class="poet-entry">
+        <div class="poet-main">
+            <div class="poet-header">
+                <span class="name"><a href="https://en.wikipedia.org/wiki/John_Dryden" target="_blank">John Dryden</a></span>
+                <span class="lifespan">(1631–1700)</span>
+                <span class="term">1668 – 1689</span>
+                <span class="badge first">&#9733; 1st Poet Laureate</span>
+            </div>
+            <div class="bio-grid">
+                <div class="bio-item"><span class="bio-label">Predecessor:</span><span class="bio-value">— <em>first holder</em></span></div>
+                <div class="bio-item"><span class="bio-label">Successor:</span><span class="bio-value"><a href="https://en.wikipedia.org/wiki/Thomas_Shadwell" target="_blank">Thomas Shadwell</a></span></div>
+                <div class="bio-item"><span class="bio-label">Duration:</span><span class="bio-value">21 years (dismissed)</span></div>
+                <div class="bio-item"><span class="bio-label">Monarch:</span><span class="bio-value">Charles II &rarr; James II &rarr; William III</span></div>
+                <div class="bio-item"><span class="bio-label">Born:</span><span class="bio-value">19 August 1631, Aldwincle, Northamptonshire</span></div>
+                <div class="bio-item"><span class="bio-label">Died:</span><span class="bio-value">12 May 1700, London</span></div>
+                <div class="bio-item"><span class="bio-label">Parents:</span><span class="bio-value">Erasmus Dryden &amp; Mary Pickering</span></div>
+                <div class="bio-item"><span class="bio-label">Siblings:</span><span class="bio-value">13 siblings (eldest of 14)</span></div>
+                <div class="bio-item"><span class="bio-label">Spouse:</span><span class="bio-value">Lady Elizabeth Howard (m. 1663)</span></div>
+                <div class="bio-item"><span class="bio-label">Children:</span><span class="bio-value">Charles, John, Erasmus-Henry</span></div>
+                <div class="bio-item"><span class="bio-label">Other names:</span><span class="bio-value">—</span></div>
+                <div class="bio-item"><span class="bio-label">Extra profession:</span><span class="bio-value">Playwright, literary critic, translator</span></div>
+                <div class="bio-item"><span class="bio-label">Related persons:</span><span class="bio-value"><a href="https://en.wikipedia.org/wiki/Ben_Jonson" target="_blank">Ben Jonson</a> (influence), <a href="https://en.wikipedia.org/wiki/John_Milton" target="_blank">John Milton</a> (contemporary), <a href="https://en.wikipedia.org/wiki/Samuel_Pepys" target="_blank">Samuel Pepys</a> (admirer)</span></div>
+            </div>
+            <div class="poet-works">
+                <span class="works-label">Famous works:</span>
+                <span class="works-list">"Absalom and Achitophel," "Mac Flecknoe," "All for Love," <em>Essay of Dramatick Poesie</em></span>
+            </div>
+            <div class="poet-note">
+                <strong>Note:</strong> Dryden dominated the literary life of Restoration England so completely that the period is known as the "Age of Dryden." He was dismissed from the laureateship in 1689 for refusing to swear allegiance to William III.
+            </div>
+        </div>
+        <div class="poet-portrait">
+            <a href="https://en.wikipedia.org/wiki/John_Dryden" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/John_Dryden_portrait.jpg/220px-John_Dryden_portrait.jpg" alt="Portrait of John Dryden" loading="lazy" onerror="this.style.display='none'">
+            </a>
+            <a href="https://en.wikipedia.org/wiki/John_Dryden" target="_blank" class="wiki-link-img">&#128279; Wikipedia</a>
+        </div>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- 2. THOMAS SHADWELL                        -->
+    <!-- ========================================== -->
+    <div class="poet-entry">
+        <div class="poet-main">
+            <div class="poet-header">
+                <span class="name"><a href="https://en.wikipedia.org/wiki/Thomas_Shadwell" target="_blank">Thomas Shadwell</a></span>
+                <span class="lifespan">(c. 1642–1692)</span>
+                <span class="term">1689 – 1692</span>
+            </div>
+            <div class="bio-grid">
+                <div class="bio-item"><span class="bio-label">Predecessor:</span><span class="bio-value"><a href="https://en.wikipedia.org/wiki/John_Dryden" target="_blank">John Dryden</a></span></div>
+                <div class="bio-item"><span class="bio-label">Successor:</span><span class="bio-value"><a href="https://en.wikipedia.org/wiki/Nahum_Tate" target="_blank">Nahum Tate</a></span></div>
+                <div class="bio-item"><span class="bio-label">Duration:</span><span class="bio-value">3 years</span></div>
+                <div class="bio-item"><span class="bio-label">Monarch:</span><span class="bio-value">William III &amp; Mary II</span></div>
+                <div class="bio-item"><span class="bio-label">Born:</span><span class="bio-value">c. 1642, Norfolk</span></div>
+                <div class="bio-item"><span class="bio-label">Died:</span><span class="bio-value">19 November 1692, London</span></div>
+                <div class="bio-item"><span class="bio-label">Parents:</span><span class="bio-value">John Shadwell (lawyer) &amp; Sarah</span></div>
+                <div class="bio-item"><span class="bio-label">Siblings:</span><span class="bio-value">—</span></div>
+                <div class="bio-item"><span class="bio-label">Spouse:</span><span class="bio-value">Anne Gibbs</span></div>
+                <div class="bio-item"><span class="bio-label">Children:</span><span class="bio-value">Charles (playwright), John, George</span></div>
+                <div class="bio-item"><span class="bio-label">Other names:</span><span class="bio-value">—</span></div>
+                <div class="bio-item"><span class="bio-label">Extra profession:</span><span class="bio-value">Playwright</span></div>
+                <div class="bio-item"><span class="bio-label">Related persons:</span><span class="bio-value"><a href="https://en.wikipedia.org/wiki/John_Dryden" target="_blank">John Dryden</a> (rival), <a href="https://en.wikipedia.org/wiki/Charles_Sackville,_6th_Earl_of_Dorset" target="_blank">Charles Sackville, Earl of Dorset</a> (patron)</span></div>
+            </div>
+            <div class="poet-works">
+                <span class="works-label">Famous works:</span>
+                <span class="works-list"><em>The Libertine</em>, <em>The Virtuoso</em>, <em>Bury-Fair</em></span>
+            </div>
+            <div class="poet-note">
+                <strong>Note:</strong> Shadwell was a rival of John Dryden, who satirised him mercilessly in <em>Mac Flecknoe</em>. He succeeded Dryden after the Glorious Revolution. He died from an overdose of opium.
+            </div>
+        </div>
+        <div class="poet-portrait">
+            <a href="https://en.wikipedia.org/wiki/Thomas_Shadwell" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Thomas_Shadwell_from_NPG.jpg/220px-Thomas_Shadwell_from_NPG.jpg" alt="Portrait of Thomas Shadwell" loading="lazy" onerror="this.style.display='none'">
+            </a>
+            <a href="https://en.wikipedia.org/wiki/Thomas_Shadwell" target="_blank" class="wiki-link-img">&#128279; Wikipedia</a>
+        </div>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- 3. NAHUM TATE                             -->
+    <!-- ========================================== -->
+    <div class="poet-entry">
+        <div class="poet-main">
+            <div class="poet-header">
+                <span class="name"><a href="https://en.wikipedia.org/wiki/Nahum_Tate" target="_blank">Nahum Tate</a></span>
+                <span class="lifespan">(1652–1715)</span>
+                <span class="term">1692 – 1715</span>
+            </div>
+            <div class="bio-grid">
+                <div class="bio-item"><span class="bio-label">Predecessor:</span><span class="bio-value"><a href="https://en.wikipedia.org/wiki/Thomas_Shadwell" target="_blank">Thomas Shadwell</a></span></div>
+                <div class="bio-item"><span class="bio-label">Successor:</span><span class="bio-value"><a href="https://en.wikipedia.org/wiki/Nicholas_Rowe_(writer)" target="_blank">Nicholas Rowe</a></span></div>
+                <div class="bio-item"><span class="bio-label">Duration:</span><span class="bio-value">23 years</span></div>
+                <div class="bio-item"><span class="bio-label">Monarch:</span><span class="bio-value">William III &amp; Mary II &rarr; Anne &rarr; George I</span></div>
+                <div class="bio-item"><span class="bio-label">Born:</span><span class="bio-value">1652, Dublin, Ireland</span></div>
+                <div class="bio-item"><span class="bio-label">Died:</span><span class="bio-value">30 July 1715, London</span></div>
+                <div class="bio-item"><span class="bio-label">Parents:</span><span class="bio-value">Faithful Teate (Irish cleric)</span></div>
+                <div class="bio-item"><span class="bio-label">Siblings:</span><span class="bio-value">—</span></div>
+                <div class="bio-item"><span class="bio-label">Spouse:</span><span class="bio-value">—</span></div>
+                <div class="bio-item"><span class="bio-label">Children:</span><span class="bio-value">Three children killed in a fire</span></div>
+                <div class="bio-item"><span class="bio-label">Other names:</span><span class="bio-value">Born Nahum Teate</span></div>
+                <div class="bio-item"><span class="bio-label">Extra profession:</span><span class="bio-value">Hymnist, lyricist</span></div>
+                <div class="bio-item"><span class="bio-label">Related persons:</span><span class="bio-value"><a href="https://en.wikipedia.org/wiki/Henry_Purcell" target="_blank">Henry Purcell</a> (collaborator), <a href="https://en.wikipedia.org/wiki/Nicholas_Brady_(poet)" target="_blank">Nicholas Brady</a> (Psalm collaborator)</span></div>
+            </div>
+            <div class="poet-works">
+                <span class="works-label">Famous works:</span>
+                <span class="works-list"><em>The History of King Lear</em> (adaptation), libretto for Purcell's <em>Dido and Aeneas</em>, <em>A New Version of the Psalms of David</em> (with Brady)</span>
+            </div>
+            <div class="poet-note">
+                <strong>Note:</strong> Tate is best known for his controversial happy-ending adaptation of Shakespeare's <em>King Lear</em>, which replaced the original for over 150 years. He was ridiculed by Alexander Pope.
+            </div>
+        </div>
+        <div class="poet-portrait">
+            <div class="no-image">&#128220;</div>
+            <a href="https://en.wikipedia.org/wiki/Nahum_Tate" target="_blank" class="wiki-link-img">&#128279; Wikipedia</a>
+        </div>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- 4. NICHOLAS ROWE                          -->
+    <!-- ========================================== -->
+    <div class="poet-entry">
+        <div class="poet-main">
+            <div class="poet-header">
+                <span class="name"><a href="https://en.wikipedia.org/wiki/Nicholas_Rowe_(writer)" target="_blank">Nicholas Rowe</a></span>
+                <span class="lifespan">(1674–1718)</span>
+                <span class="term">1715 – 1718</span>
+            </div>
+            <div class="bio-grid">
+                <div class="bio-item"><span class="bio-label">Predecessor:</span><span class="bio-value"><a href="https://en.wikipedia.org/wiki/Nahum_Tate" target="_blank">Nahum Tate</a></span></div>
+                <div class="bio-item"><span class="bio-label">Successor:</span><span class="bio-value"><a href="https://en.wikipedia.org/wiki/Laurence_Eusden" target="_blank">Laurence Eusden</a></span></div>
+                <div class="bio-item"><span class="bio-label">Duration:</span><span class="bio-value">3 years</span></div>
+                <div class="bio-item"><span class="bio-label">Monarch:</span><span class="bio-value">George I</span></div>
+                <div class="bio-item"><span class="bio-label">Born:</span><span class="bio-value">20 June 1674, Little Barford, Bedfordshire</span></div>
+                <div class="bio-item"><span class="bio-label">Died:</span><span class="bio-value">6 December 1718, London</span></div>
+                <div class="bio-item"><span class="bio-label">Parents:</span><span class="bio-value">John Rowe (barrister) &amp; Elizabeth Edwards</span></div>
+                <div class="bio-item"><span class="bio-label">Siblings:</span><span class="bio-value">—</span></div>
+                <div class="bio-item"><span class="bio-label">Spouse:</span><span class="bio-value">1st: Miss Parsons; 2nd: Anne Devenish</span></div>
+                <div class="bio-item"><span class="bio-label">Children:</span><span class="bio-value">John (son), Charlotte (daughter)</span></div>
+                <div class="bio-item"><span class="bio-label">Other names:</span><span class="bio-value">—</span></div>
+                <div class="bio-item"><span class="bio-label">Extra profession:</span><span class="bio-value">Dramatist, first critical editor of Shakespeare</span></div>
+                <div class="bio-item"><span class="bio-label">Related persons:</span><span class="bio-value"><a href="https://en.wikipedia.org/wiki/Alexander_Pope" target="_blank">Alexander Pope</a> (friend/admirer), <a href="https://en.wikipedia.org/wiki/Joseph_Addison" target="_blank">Joseph Addison</a> (friend)</span></div>
+            </div>
+            <div class="poet-works">
+                <span class="works-label">Famous works:</span>
+                <span class="works-list"><em>The Fair Penitent</em>, <em>Tamerlane</em>, <em>The Tragedy of Jane Shore</em>, six-volume edition of Shakespeare's plays (1709)</span>
+            </div>
+            <div class="poet-note">
+                <strong>Note:</strong> Rowe "brought dignity and respectability" to the laureateship after his lacklustre predecessors. He is buried in Poets' Corner, Westminster Abbey.
+            </div>
+        </div>
+        <div class="poet-portrait">
+            <a href="https://en.wikipedia.org/wiki/Nicholas_Rowe_(writer)" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Nicholas-Rowe-1.jpg/220px-Nicholas-Rowe-1.jpg" alt="Portrait of Nicholas Rowe" loading="lazy" onerror="this.style.display='none'">
+            </a>
+            <a href="https://en.wikipedia.org/wiki/Nicholas_Rowe_(writer)" target="_blank" class="wiki-link-img">&#128279; Wikipedia</a>
+        </div>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- 5. LAURENCE EUSDEN                        -->
+    <!-- ========================================== -->
+    <div class="poet-entry">
+        <div class="poet-main">
+            <div class="poet-header">
+                <span class="name"><a href="https://en.wikipedia.org/wiki/Laurence_Eusden" target="_blank">Laurence Eusden</a></span>
+                <span class="lifespan">(1688–1730)</span>
+                <span class="term">1718 – 1730</span>
+                <span class="badge">Youngest Laureate</span>
+            </div>
+            <div class="bio-grid">
+                <div class="bio-item"><span class="bio-label">Predecessor:</span><span class="bio-value"><a href="https://en.wikipedia.org/wiki/Nicholas_Rowe_(writer)" target="_blank">Nicholas Rowe</a></span></div>
+                <div class="bio-item"><span class="bio-label">Successor:</span><span class="bio-value"><a href="https://en.wikipedia.org/wiki/Colley_Cibber" target="_blank">Colley Cibber</a></span></div>
+                <div class="bio-item"><span class="bio-label">Duration:</span><span class="bio-value">12 years</span></div>
+                <div class="bio-item"><span class="bio-label">Monarch:</span><span class="bio-value">George I</span></div>
+                <div class="bio-item"><span class="bio-label">Born:</span><span class="bio-value">bapt. 6 September 1688, Spofforth, Yorkshire</span></div>
+                <div class="bio-item"><span class="bio-label">Died:</span><span class="bio-value">27 September 1730, Coningsby, Lincolnshire</span></div>
+                <div class="bio-item"><span class="bio-label">Parents:</span><span class="bio-value">Rev. Laurence Eusden (rector of Spofforth)</span></div>
+                <div class="bio-item"><span class="bio-label">Siblings:</span><span class="bio-value">—</span></div>
+                <div class="bio-item"><span class="bio-label">Spouse:</span><span class="bio-value">—</span></div>
+                <div class="bio-item"><span class="bio-label">Children:</span><span class="bio-value">—</span></div>
+                <div class="bio-item"><span class="bio-label">Other names:</span><span class="bio-value">—</span></div>
+                <div class="bio-item"><span class="bio-label">Extra profession:</span><span class="bio-value">Clergyman (rector of Coningsby)</span></div>
+                <div class="bio-item"><span class="bio-label">Related persons:</span><span class="bio-value"><a href="https://en.wikipedia.org/wiki/Alexander_Pope" target="_blank">Alexander Pope</a> (ridiculed him), <a href="https://en.wikipedia.org/wiki/Jonathan_Swift" target="_blank">Jonathan Swift</a> (ridiculed him)</span></div>
+            </div>
+            <div class="poet-works">
+                <span class="works-label">Famous works:</span>
+                <span class="works-list">Birthday odes, poems in <em>The Spectator</em></span>
+            </div>
+            <div class="poet-note">
+                <strong>Note:</strong> Eusden became Poet Laureate at age 30 — the youngest ever appointed. He secured the position by writing a flattering poem on the marriage of the Duke of Newcastle, who was Lord Chamberlain. He was widely ridiculed by Pope, Swift, and others.
+            </div>
+        </div>
+        <div class="poet-portrait">
+            <div class="no-image">&#128220;</div>
+            <a href="https://en.wikipedia.org/wiki/Laurence_Eusden" target="_blank" class="wiki-link-img">&#128279; Wikipedia</a>
+        </div>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- 6. COLLEY CIBBER                          -->
+    <!-- ========================================== -->
+    <div class="poet-entry">
+        <div class="poet-main">
+            <div class="poet-header">
+                <span class="name"><a href="https://en.wikipedia.org/wiki/Colley_Cibber" target="_blank">Colley Cibber</a></span>
+                <span class="lifespan">(1671–1757)</span>
+                <span class="term">1730 – 1757</span>
+            </div>
+            <div class="bio-grid">
+                <div class="bio-item"><span class="bio-label">Predecessor:</span><span class="bio-value"><a href="https://en.wikipedia.org/wiki/Laurence_Eusden" target="_blank">Laurence Eusden</a></span></div>
+                <div class="bio-item"><span class="bio-label">Successor:</span><span class="bio-value"><a href="https://en.wikipedia.org/wiki/William_Whitehead_(poet)" target="_blank">William Whitehead</a></span></div>
+                <div class="bio-item"><span class="bio-label">Duration:</span><span class="bio-value">27 years</span></div>
+                <div class="bio-item"><span class="bio-label">Monarch:</span><span class="bio-value">George II</span></div>
+                <div class="bio-item"><span class="bio-label">Born:</span><span class="bio-value">6 November 1671, London</span></div>
+                <div class="bio-item"><span class="bio-label">Died:</span><span class="bio-value">11 December 1757</span></div>
+                <div class="bio-item"><span class="bio-label">Parents:</span><span class="bio-value">Caius Gabriel Cibber (sculptor) &amp; Jane Colley</span></div>
+                <div class="bio-item"><span class="bio-label">Siblings:</span><span class="bio-value">—</span></div>
+                <div class="bio-item"><span class="bio-label">Spouse:</span><span class="bio-value">Katherine (m. 1693)</span></div>
+                <div class="bio-item"><span class="bio-label">Children:</span><span class="bio-value">12 children, including Theophilus (actor) and Charlotte</span></div>
+                <div class="bio-item"><span class="bio-label">Other names:</span><span class="bio-value">—</span></div>
+                <div class="bio-item"><span class="bio-label">Extra profession:</span><span class="bio-value">Actor-manager, playwright</span></div>
+                <div class="bio-item"><span class="bio-label">Related persons:</span><span class="bio-value"><a href="https://en.wikipedia.org/wiki/Alexander_Pope" target="_blank">Alexander Pope</a> (bitter rival, satirised in <em>The Dunciad</em>)</span></div>
+            </div>
+            <div class="poet-works">
+                <span class="works-label">Famous works:</span>
+                <span class="works-list"><em>Love's Last Shift</em>, <em>The Careless Husband</em>, <em>An Apology for the Life of Colley Cibber</em> (memoir)</span>
+            </div>
+            <div class="poet-note">
+                <strong>Note:</strong> Cibber was a successful actor-manager and playwright. His colourful memoir is one of the most entertaining autobiographies of the 18th century. He was satirised by Pope in <em>The Dunciad</em>.
+            </div>
+        </div>
+        <div class="poet-portrait">
+            <a href="https://en.wikipedia.org/wiki/Colley_Cibber" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Colley_Cibber.jpg/220px-Colley_Cibber.jpg" alt="Portrait of Colley Cibber" loading="lazy" onerror="this.style.display='none'">
+            </a>
+            <a href="https://en.wikipedia.org/wiki/Colley_Cibber" target="_blank" class="wiki-link-img">&#128279; Wikipedia</a>
+        </div>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- 7. WILLIAM WHITEHEAD                      -->
+    <!-- ========================================== -->
+    <div class="poet-entry">
+        <div class="poet-main">
+            <div class="poet-header">
+                <span class="name"><a href="https://en.wikipedia.org/wiki/William_Whitehead_(poet)" target="_blank">William Whitehead</a></span>
+                <span class="lifespan">(1715–1785)</span>
+                <span class="term">1757 – 1785</span>
+            </div>
+            <div class="bio-grid">
+                <div class="bio-item"><span class="bio-label">Predecessor:</span><span class="bio-value"><a href="https://en.wikipedia.org/wiki/Colley_Cibber" target="_blank">Colley Cibber</a></span></div>
+                <div class="bio-item"><span class="bio-label">Successor:</span><span class="bio-value"><a href="https://en.wikipedia.org/wiki/Thomas_Warton" target="_blank">Thomas Warton</a></span></div>
+                <div class="bio-item"><span class="bio-label">Duration:</span><span class="bio-value">27 years</span></div>
+                <div class="bio-item"><span class="bio-label">Monarch:</span><span class="bio-value">George II &rarr; George III</span></div>
+                <div class="bio-item"><span class="bio-label">Born:</span><span class="bio-value">bapt. 12 February 1715, Cambridge</span></div>
+                <div class="bio-item"><span class="bio-label">Died:</span><span class="bio-value">14 April 1785</span></div>
+                <div class="bio-item"><span class="bio-label">Parents:</span><span class="bio-value">Richard Whitehead (baker) &amp; Mary</span></div>
+                <div class="bio-item"><span class="bio-label">Siblings:</span><span class="bio-value">Second son</span></div>
+                <div class="bio-item"><span class="bio-label">Spouse:</span><span class="bio-value">—</span></div>
+                <div class="bio-item"><span class="bio-label">Children:</span><span class="bio-value">—</span></div>
+                <div class="bio-item"><span class="bio-label">Other names:</span><span class="bio-value">—</span></div>
+                <div class="bio-item"><span class="bio-label">Extra profession:</span><span class="bio-value">Playwright</span></div>
+                <div class="bio-item"><span class="bio-label">Related persons:</span><span class="bio-value"><a href="https://en.wikipedia.org/wiki/Thomas_Gray" target="_blank">Thomas Gray</a> (friend; Gray declined the laureateship)</span></div>
+            </div>
+            <div class="poet-works">
+                <span class="works-label">Famous works:</span>
+                <span class="works-list"><em>The School for Lovers</em>, <em>The Roman Father</em>, <em>Poems and Plays</em> (1774)</span>
+            </div>
+            <div class="poet-note">
+                <strong>Note:</strong> Whitehead was appointed after <strong>Thomas Gray</strong> declined the laureateship. He wrote annual birthday odes every year until his death.
+            </div>
+        </div>
+        <div class="poet-portrait">
+            <a href="https://en.wikipedia.org/wiki/William_Whitehead_(poet)" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/William_Whitehead_poet.jpg/220px-William_Whitehead_poet.jpg" alt="Portrait of William Whitehead" loading="lazy" onerror="this.style.display='none'">
+            </a>
+            <a href="https://en.wikipedia.org/wiki/William_Whitehead_(poet)" target="_blank" class="wiki-link-img">&#128279; Wikipedia</a>
+        </div>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- 8. THOMAS WARTON                          -->
+    <!-- ========================================== -->
+    <div class="poet-entry">
+        <div class="poet-main">
+            <div class="poet-header">
+                <span class="name"><a href="https://en.wikipedia.org/wiki/Thomas_Warton" target="_blank">Thomas Warton</a></span>
+                <span class="lifespan">(1728–1790)</span>
+                <span class="term">1785 – 1790</span>
+            </div>
+            <div class="bio-grid">
+                <div class="bio-item"><span class="bio-label">Predecessor:</span><span class="bio-value"><a href="https://en.wikipedia.org/wiki/William_Whitehead_(poet)" target="_blank">William Whitehead</a></span></div>
+                <div class="bio-item"><span class="bio-label">Successor:</span><span class="bio-value"><a href="https://en.wikipedia.org/wiki/Henry_James_Pye" target="_blank">Henry James Pye</a></span></div>
+                <div class="bio-item"><span class="bio-label">Duration:</span><span class="bio-value">5 years</span></div>
+                <div class="bio-item"><span class="bio-label">Monarch:</span><span class="bio-value">George III</span></div>
+                <div class="bio-item"><span class="bio-label">Born:</span><span class="bio-value">9 January 1728, Basingstoke, Hampshire</span></div>
+                <div class="bio-item"><span class="bio-label">Died:</span><span class="bio-value">21 May 1790</span></div>
+                <div class="bio-item"><span class="bio-label">Parents:</span><span class="bio-value">Thomas Warton the elder &amp; Elizabeth Richardson</span></div>
+                <div class="bio-item"><span class="bio-label">Siblings:</span><span class="bio-value">Joseph Warton (poet and critic), Jane Warton</span></div>
+                <div class="bio-item"><span class="bio-label">Spouse:</span><span class="bio-value">—</span></div>
+                <div class="bio-item"><span class="bio-label">Children:</span><span class="bio-value">—</span></div>
+                <div class="bio-item"><span class="bio-label">Other names:</span><span class="bio-value">Thomas Warton the younger</span></div>
+                <div class="bio-item"><span class="bio-label">Extra profession:</span><span class="bio-value">Literary historian, critic</span></div>
+                <div class="bio-item"><span class="bio-label">Related persons:</span><span class="bio-value"><a href="https://en.wikipedia.org/wiki/Samuel_Johnson" target="_blank">Samuel Johnson</a> (friend, member of The Literary Club)</span></div>
+            </div>
+            <div class="poet-works">
+                <span class="works-label">Famous works:</span>
+                <span class="works-list"><em>The History of English Poetry</em> (3 vols), <em>Observations on the Faerie Queene of Spenser</em>, <em>The Pleasures of Melancholy</em></span>
+            </div>
+            <div class="poet-note">
+                <strong>Note:</strong> Warton was a pioneering literary historian. His <em>History of English Poetry</em> was a landmark work of scholarship. He died of gout and was buried in Trinity College Chapel, Oxford.
+            </div>
+        </div>
+        <div class="poet-portrait">
+            <a href="https://en.wikipedia.org/wiki/Thomas_Warton" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Thomas_Warton_%28the_younger%29.jpg/220px-Thomas_Warton_%28the_younger%29.jpg" alt="Portrait of Thomas Warton" loading="lazy" onerror="this.style.display='none'">
+            </a>
+            <a href="https://en.wikipedia.org/wiki/Thomas_Warton" target="_blank" class="wiki-link-img">&#128279; Wikipedia</a>
+        </div>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- 9. HENRY JAMES PYE                        -->
+    <!-- ========================================== -->
+    <div class="poet-entry">
+        <div class="poet-main">
+            <div class="poet-header">
+                <span class="name"><a href="https://en.wikipedia.org/wiki/Henry_James_Pye" target="_blank">Henry James Pye</a></span>
+                <span class="lifespan">(1745–1813)</span>
+                <span class="term">1790 – 1813</span>
+            </div>
+            <div class="bio-grid">
+                <div class="bio-item"><span class="bio-label">Predecessor:</span><span class="bio-value"><a href="https://en.wikipedia.org/wiki/Thomas_Warton" target="_blank">Thomas Warton</a></span></div>
+                <div class="bio-item"><span class="bio-label">Successor:</span><span class="bio-value"><a href="https://en.wikipedia.org/wiki/Robert_Southey" target="_blank">Robert Southey</a></span></div>
+                <div class="bio-item"><span class="bio-label">Duration:</span><span class="bio-value">23 years</span></div>
+                <div class="bio-item"><span class="bio-label">Monarch:</span><span class="bio-value">George III</span></div>
+                <div class="bio-item"><span class="bio-label">Born:</span><span class="bio-value">20 February 1745, London</span></div>
+                <div class="bio-item"><span class="bio-label">Died:</span><span class="bio-value">11 August 1813, Pinner, Middlesex</span></div>
+                <div class="bio-item"><span class="bio-label">Parents:</span><span class="bio-value">Henry Pye (MP) &amp; Mary</span></div>
+                <div class="bio-item"><span class="bio-label">Siblings:</span><span class="bio-value">Eldest son</span></div>
+                <div class="bio-item"><span class="bio-label">Spouse:</span><span class="bio-value">—</span></div>
+                <div class="bio-item"><span class="bio-label">Children:</span><span class="bio-value">—</span></div>
+                <div class="bio-item"><span class="bio-label">Other names:</span><span class="bio-value">—</span></div>
+                <div class="bio-item"><span class="bio-label">Extra profession:</span><span class="bio-value">Politician (MP for Berkshire), Justice of the Peace</span></div>
+                <div class="bio-item"><span class="bio-label">Related persons:</span><span class="bio-value">Literary contemporaries included <a href="https://en.wikipedia.org/wiki/Lord_Byron" target="_blank">Lord Byron</a> and <a href="https://en.wikipedia.org/wiki/Walter_Scott" target="_blank">Sir Walter Scott</a></span></div>
+            </div>
+            <div class="poet-works">
+                <span class="works-label">Famous works:</span>
+                <span class="works-list"><em>The Art of War</em>, <em>Poems on Various Subjects</em>, translations of Aristotle and Pindar</span>
+            </div>
+            <div class="poet-note">
+                <strong>Note:</strong> Pye's appointment "owed nothing to poetic achievement" and was likely compensation for losing his seat in Parliament. He was the first laureate to receive a salary from the Prime Minister's recommendation.
+            </div>
+        </div>
+        <div class="poet-portrait">
+            <div class="no-image">&#128220;</div>
+            <a href="https://en.wikipedia.org/wiki/Henry_James_Pye" target="_blank" class="wiki-link-img">&#128279; Wikipedia</a>
+        </div>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- 10. ROBERT SOUTHEY                        -->
+    <!-- ========================================== -->
+    <div class="poet-entry">
+        <div class="poet-main">
+            <div class="poet-header">
+                <span class="name"><a href="https://en.wikipedia.org/wiki/Robert_Southey" target="_blank">Robert Southey</a></span>
+                <span class="lifespan">(1774–1843)</span>
+                <span class="term">1813 – 1843</span>
+            </div>
+            <div class="bio-grid">
+                <div class="bio-item"><span class="bio-label">Predecessor:</span><span class="bio-value"><a href="https://en.wikipedia.org/wiki/Henry_James_Pye" target="_blank">Henry James Pye</a></span></div>
+                <div class="bio-item"><span class="bio-label">Successor:</span><span class="bio-value"><a href="https://en.wikipedia.org/wiki/William_Wordsworth" target="_blank">William Wordsworth</a></span></div>
+                <div class="bio-item"><span class="bio-label">Duration:</span><span class="bio-value">30 years</span></div>
+                <div class="bio-item"><span class="bio-label">Monarch:</span><span class="bio-value">George III &rarr; George IV &rarr; William IV &rarr; Victoria</span></div>
+                <div class="bio-item"><span class="bio-label">Born:</span><span class="bio-value">12 August 1774, Bristol</span></div>
+                <div class="bio-item"><span class="bio-label">Died:</span><span class="bio-value">21 March 1843</span></div>
+                <div class="bio-item"><span class="bio-label">Parents:</span><span class="bio-value">Robert Southey (linen draper) &amp; Margaret Hill</span></div>
+                <div class="bio-item"><span class="bio-label">Siblings:</span><span class="bio-value">Second son</span></div>
+                <div class="bio-item"><span class="bio-label">Spouse:</span><span class="bio-value">—</span></div>
+                <div class="bio-item"><span class="bio-label">Children:</span><span class="bio-value">—</span></div>
+                <div class="bio-item"><span class="bio-label">Other names:</span><span class="bio-value">—</span></div>
+                <div class="bio-item"><span class="bio-label">Extra profession:</span><span class="bio-value">Historian, biographer, translator</span></div>
+                <div class="bio-item"><span class="bio-label">Related persons:</span><span class="bio-value"><a href="https://en.wikipedia.org/wiki/Samuel_Taylor_Coleridge" target="_blank">Samuel Taylor Coleridge</a> (close friend), <a href="https://en.wikipedia.org/wiki/William_Wordsworth" target="_blank">William Wordsworth</a> (fellow Lake Poet)</span></div>
+            </div>
+            <div class="poet-works">
+                <span class="works-label">Famous works:</span>
+                <span class="works-list"><em>The Life of Nelson</em>, <em>Madoc</em>, <em>Thalaba the Destroyer</em>, <em>The Curse of Kehama</em>, "The Inchcape Rock"</span>
+            </div>
+            <div class="poet-note">
+                <strong>Note:</strong> Southey was one of the "Lake Poets" along with Wordsworth and Coleridge. He was offered the laureateship in 1813 (after Walter Scott declined) and held it for 30 years.
+            </div>
+        </div>
+        <div class="poet-portrait">
+            <a href="https://en.wikipedia.org/wiki/Robert_Southey" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Robert_Southey_portrait.jpg/220px-Robert_Southey_portrait.jpg" alt="Portrait of Robert Southey" loading="lazy" onerror="this.style.display='none'">
+            </a>
+            <a href="https://en.wikipedia.org/wiki/Robert_Southey" target="_blank" class="wiki-link-img">&#128279; Wikipedia</a>
+        </div>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- 11. WILLIAM WORDSWORTH                    -->
+    <!-- ========================================== -->
+    <div class="poet-entry">
+        <div class="poet-main">
+            <div class="poet-header">
+                <span class="name"><a href="https://en.wikipedia.org/wiki/William_Wordsworth" target="_blank">William Wordsworth</a></span>
+                <span class="lifespan">(1770–1850)</span>
+                <span class="term">1843 – 1850</span>
+            </div>
+            <div class="bio-grid">
+                <div class="bio-item"><span class="bio-label">Predecessor:</span><span class="bio-value"><a href="https://en.wikipedia.org/wiki/Robert_Southey" target="_blank">Robert Southey</a></span></div>
+                <div class="bio-item"><span class="bio-label">Successor:</span><span class="bio-value"><a href="https://en.wikipedia.org/wiki/Alfred,_Lord_Tennyson" target="_blank">Alfred, Lord Tennyson</a></span></div>
+                <div class="bio-item"><span class="bio-label">Duration:</span><span class="bio-value">7 years</span></div>
+                <div class="bio-item"><span class="bio-label">Monarch:</span><span class="bio-value">Victoria</span></div>
+                <div class="bio-item"><span class="bio-label">Born:</span><span class="bio-value">7 April 1770, Cockermouth, Cumberland</span></div>
+                <div class="bio-item"><span class="bio-label">Died:</span><span class="bio-value">23 April 1850, Ambleside</span></div>
+                <div class="bio-item"><span class="bio-label">Parents:</span><span class="bio-value">John Wordsworth &amp; Ann Cookson</span></div>
+                <div class="bio-item"><span class="bio-label">Siblings:</span><span class="bio-value">Second of five children, including sister Dorothy</span></div>
+                <div class="bio-item"><span class="bio-label">Spouse:</span><span class="bio-value">Mary Hutchinson (m. 1802)</span></div>
+                <div class="bio-item"><span class="bio-label">Children:</span><span class="bio-value">John, Dorothy (Dora), Thomas, Catherine, William</span></div>
+                <div class="bio-item"><span class="bio-label">Other names:</span><span class="bio-value">—</span></div>
+                <div class="bio-item"><span class="bio-label">Extra profession:</span><span class="bio-value">—</span></div>
+                <div class="bio-item"><span class="bio-label">Related persons:</span><span class="bio-value"><a href="https://en.wikipedia.org/wiki/Samuel_Taylor_Coleridge" target="_blank">Samuel Taylor Coleridge</a> (close friend &amp; collaborator), <a href="https://en.wikipedia.org/wiki/Dorothy_Wordsworth" target="_blank">Dorothy Wordsworth</a> (sister &amp; muse)</span></div>
+            </div>
+            <div class="poet-works">
+                <span class="works-label">Famous works:</span>
+                <span class="works-list"><em>The Prelude</em>, <em>Lyrical Ballads</em> (with Coleridge), "I Wandered Lonely as a Cloud," "Ode: Intimations of Immortality," <em>The Excursion</em></span>
+            </div>
+            <div class="poet-note">
+                <strong>Note:</strong> Wordsworth is one of the most celebrated poets in the English language and a central figure of the Romantic movement. He became laureate at age 73 and held the post until his death.
+            </div>
+        </div>
+        <div class="poet-portrait">
+            <a href="https://en.wikipedia.org/wiki/William_Wordsworth" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/William_Wordsworth_portrait.jpg/220px-William_Wordsworth_portrait.jpg" alt="Portrait of William Wordsworth" loading="lazy" onerror="this.style.display='none'">
+            </a>
+            <a href="https://en.wikipedia.org/wiki/William_Wordsworth" target="_blank" class="wiki-link-img">&#128279; Wikipedia</a>
+        </div>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- 12. ALFRED, LORD TENNYSON                -->
+    <!-- ========================================== -->
+    <div class="poet-entry">
+        <div class="poet-main">
+            <div class="poet-header">
+                <span class="name"><a href="https://en.wikipedia.org/wiki/Alfred,_Lord_Tennyson" target="_blank">Alfred, Lord Tennyson</a></span>
+                <span class="lifespan">(1809–1892)</span>
+                <span class="term">1850 – 1892</span>
+                <span class="badge">Longest-serving (42 years)</span>
+            </div>
+            <div class="bio-grid">
+                <div class="bio-item"><span class="bio-label">Predecessor:</span><span class="bio-value"><a href="https://en.wikipedia.org/wiki/William_Wordsworth" target="_blank">William Wordsworth</a></span></div>
+                <div class="bio-item"><span class="bio-label">Successor:</span><span class="bio-value"><a href="https://en.wikipedia.org/wiki/Alfred_Austin" target="_blank">Alfred Austin</a></span></div>
+                <div class="bio-item"><span class="bio-label">Duration:</span><span class="bio-value">42 years</span></div>
+                <div class="bio-item"><span class="bio-label">Monarch:</span><span class="bio-value">Victoria</span></div>
+                <div class="bio-item"><span class="bio-label">Born:</span><span class="bio-value">6 August 1809, Somersby, Lincolnshire</span></div>
+                <div class="bio-item"><span class="bio-label">Died:</span><span class="bio-value">6 October 1892</span></div>
+                <div class="bio-item"><span class="bio-label">Parents:</span><span class="bio-value">Rev. George Clayton Tennyson &amp; Elizabeth Fytche</span></div>
+                <div class="bio-item"><span class="bio-label">Siblings:</span><span class="bio-value">Fourth of 12 children (11 surviving)</span></div>
+                <div class="bio-item"><span class="bio-label">Spouse:</span><span class="bio-value">—</span></div>
+                <div class="bio-item"><span class="bio-label">Children:</span><span class="bio-value">—</span></div>
+                <div class="bio-item"><span class="bio-label">Other names:</span><span class="bio-value">1st Baron Tennyson</span></div>
+                <div class="bio-item"><span class="bio-label">Extra profession:</span><span class="bio-value">—</span></div>
+                <div class="bio-item"><span class="bio-label">Related persons:</span><span class="bio-value"><a href="https://en.wikipedia.org/wiki/Arthur_Henry_Hallam" target="_blank">Arthur Henry Hallam</a> (close friend, subject of <em>In Memoriam</em>), <a href="https://en.wikipedia.org/wiki/Thomas_Carlyle" target="_blank">Thomas Carlyle</a> (friend)</span></div>
+            </div>
+            <div class="poet-works">
+                <span class="works-label">Famous works:</span>
+                <span class="works-list"><em>In Memoriam A.H.H.</em>, "The Charge of the Light Brigade," "Ulysses," "The Lady of Shalott," <em>Idylls of the King</em>, "Tears, Idle Tears"</span>
+            </div>
+            <div class="poet-note">
+                <strong>Note:</strong> Tennyson was the longest-serving Poet Laureate (42 years). His "Charge of the Light Brigade" and "Ode on the Death of the Duke of Wellington" were cherished by the Victorian public. Upon his death, the post was left vacant for four years as a mark of respect.
+            </div>
+        </div>
+        <div class="poet-portrait">
+            <a href="https://en.wikipedia.org/wiki/Alfred,_Lord_Tennyson" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Alfred_Tennyson_2.jpg/220px-Alfred_Tennyson_2.jpg" alt="Portrait of Alfred, Lord Tennyson" loading="lazy" onerror="this.style.display='none'">
+            </a>
+            <a href="https://en.wikipedia.org/wiki/Alfred,_Lord_Tennyson" target="_blank" class="wiki-link-img">&#128279; Wikipedia</a>
+        </div>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- 13. ALFRED AUSTIN                         -->
+    <!-- ========================================== -->
+    <div class="poet-entry">
+        <div class="poet-main">
+            <div class="poet-header">
+                <span class="name"><a href="https://en.wikipedia.org/wiki/Alfred_Austin" target="_blank">Alfred Austin</a></span>
+                <span class="lifespan">(1835–1913)</span>
+                <span class="term">1896 – 1913</span>
+            </div>
+            <div class="bio-grid">
+                <div class="bio-item"><span class="bio-label">Predecessor:</span><span class="bio-value"><a href="https://en.wikipedia.org/wiki/Alfred,_Lord_Tennyson" target="_blank">Alfred, Lord Tennyson</a></span></div>
+                <div class="bio-item"><span class="bio-label">Successor:</span><span class="bio-value"><a href="https://en.wikipedia.org/wiki/Robert_Bridges" target="_blank">Robert Bridges</a></span></div>
+                <div class="bio-item"><span class="bio-label">Duration:</span><span class="bio-value">17 years</span></div>
+                <div class="bio-item"><span class="bio-label">Monarch:</span><span class="bio-value">Victoria &rarr; Edward VII &rarr; George V</span></div>
+                <div class="bio-item"><span class="bio-label">Born:</span><span class="bio-value">30 May 1835, Leeds</span></div>
+                <div class="bio-item"><span class="bio-label">Died:</span><span class="bio-value">2 June 1913, Ashford, Kent</span></div>
+                <div class="bio-item"><span class="bio-label">Parents:</span><span class="bio-value">Joseph Austin (merchant)</span></div>
+                <div class="bio-item"><span class="bio-label">Siblings:</span><span class="bio-value">—</span></div>
+                <div class="bio-item"><span class="bio-label">Spouse:</span><span class="bio-value">—</span></div>
+                <div class="bio-item"><span class="bio-label">Children:</span><span class="bio-value">—</span></div>
+                <div class="bio-item"><span class="bio-label">Other names:</span><span class="bio-value">—</span></div>
+                <div class="bio-item"><span class="bio-label">Extra profession:</span><span class="bio-value">Journalist, critic, barrister</span></div>
+                <div class="bio-item"><span class="bio-label">Related persons:</span><span class="bio-value">Contemporaries included <a href="https://en.wikipedia.org/wiki/Thomas_Hardy" target="_blank">Thomas Hardy</a> and <a href="https://en.wikipedia.org/wiki/Rudyard_Kipling" target="_blank">Rudyard Kipling</a></span></div>
+            </div>
+            <div class="poet-works">
+                <span class="works-label">Famous works:</span>
+                <span class="works-list"><em>The Human Tragedy</em>, <em>The Season: a Satire</em>, political and nature poetry</span>
+            </div>
+            <div class="poet-note">
+                <strong>Note:</strong> Austin was appointed after a four-year gap following Tennyson's death. He is often regarded as one of the lesser laureates, but he was a popular journalist and critic of his time.
+            </div>
+        </div>
+        <div class="poet-portrait">
+            <a href="https://en.wikipedia.org/wiki/Alfred_Austin" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Alfred_Austin.jpg/220px-Alfred_Austin.jpg" alt="Portrait of Alfred Austin" loading="lazy" onerror="this.style.display='none'">
+            </a>
+            <a href="https://en.wikipedia.org/wiki/Alfred_Austin" target="_blank" class="wiki-link-img">&#128279; Wikipedia</a>
+        </div>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- 14. ROBERT BRIDGES                        -->
+    <!-- ========================================== -->
+    <div class="poet-entry">
+        <div class="poet-main">
+            <div class="poet-header">
+                <span class="name"><a href="https://en.wikipedia.org/wiki/Robert_Bridges" target="_blank">Robert Bridges</a></span>
+                <span class="lifespan">(1844–1930)</span>
+                <span class="term">1913 – 1930</span>
+            </div>
+            <div class="bio-grid">
+                <div class="bio-item"><span class="bio-label">Predecessor:</span><span class="bio-value"><a href="https://en.wikipedia.org/wiki/Alfred_Austin" target="_blank">Alfred Austin</a></span></div>
+                <div class="bio-item"><span class="bio-label">Successor:</span><span class="bio-value"><a href="https://en.wikipedia.org/wiki/John_Masefield" target="_blank">John Masefield</a></span></div>
+                <div class="bio-item"><span class="bio-label">Duration:</span><span class="bio-value">17 years</span></div>
+                <div class="bio-item"><span class="bio-label">Monarch:</span><span class="bio-value">George V</span></div>
+                <div class="bio-item"><span class="bio-label">Born:</span><span class="bio-value">23 October 1844, Walmer, Kent</span></div>
+                <div class="bio-item"><span class="bio-label">Died:</span><span class="bio-value">21 April 1930, Boar's Hill, Oxford</span></div>
+                <div class="bio-item"><span class="bio-label">Parents:</span><span class="bio-value">—</span></div>
+                <div class="bio-item"><span class="bio-label">Siblings:</span><span class="bio-value">—</span></div>
+                <div class="bio-item"><span class="bio-label">Spouse:</span><span class="bio-value">—</span></div>
+                <div class="bio-item"><span class="bio-label">Children:</span><span class="bio-value">—</span></div>
+                <div class="bio-item"><span class="bio-label">Other names:</span><span class="bio-value">—</span></div>
+                <div class="bio-item"><span class="bio-label">Extra profession:</span><span class="bio-value">Physician (the only laureate with a medical background)</span></div>
+                <div class="bio-item"><span class="bio-label">Related persons:</span><span class="bio-value"><a href="https://en.wikipedia.org/wiki/Gerard_Manley_Hopkins" target="_blank">Gerard Manley Hopkins</a> (friend, posthumous champion and editor)</span></div>
+            </div>
+            <div class="poet-works">
+                <span class="works-label">Famous works:</span>
+                <span class="works-list"><em>The Testament of Beauty</em> (published on his 85th birthday), <em>Poems of Gerard Manley Hopkins</em> (edited)</span>
+            </div>
+            <div class="poet-note">
+                <strong>Note:</strong> Bridges is better known today as the editor and champion of his friend Gerard Manley Hopkins than for his own poetry. He helped found the Society for Pure English.
+            </div>
+        </div>
+        <div class="poet-portrait">
+            <a href="https://en.wikipedia.org/wiki/Robert_Bridges" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Robert_Bridges_c1916.jpg/220px-Robert_Bridges_c1916.jpg" alt="Portrait of Robert Bridges" loading="lazy" onerror="this.style.display='none'">
+            </a>
+            <a href="https://en.wikipedia.org/wiki/Robert_Bridges" target="_blank" class="wiki-link-img">&#128279; Wikipedia</a>
+        </div>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- 15. JOHN MASEFIELD                        -->
+    <!-- ========================================== -->
+    <div class="poet-entry">
+        <div class="poet-main">
+            <div class="poet-header">
+                <span class="name"><a href="https://en.wikipedia.org/wiki/John_Masefield" target="_blank">John Masefield</a></span>
+                <span class="lifespan">(1878–1967)</span>
+                <span class="term">1930 – 1967</span>
+            </div>
+            <div class="bio-grid">
+                <div class="bio-item"><span class="bio-label">Predecessor:</span><span class="bio-value"><a href="https://en.wikipedia.org/wiki/Robert_Bridges" target="_blank">Robert Bridges</a></span></div>
+                <div class="bio-item"><span class="bio-label">Successor:</span><span class="bio-value"><a href="https://en.wikipedia.org/wiki/Cecil_Day-Lewis" target="_blank">Cecil Day-Lewis</a></span></div>
+                <div class="bio-item"><span class="bio-label">Duration:</span><span class="bio-value">37 years</span></div>
+                <div class="bio-item"><span class="bio-label">Monarch:</span><span class="bio-value">George V &rarr; Edward VIII &rarr; George VI &rarr; Elizabeth II</span></div>
+                <div class="bio-item"><span class="bio-label">Born:</span><span class="bio-value">1 June 1878, Ledbury, Herefordshire</span></div>
+                <div class="bio-item"><span class="bio-label">Died:</span><span class="bio-value">12 May 1967, near Abingdon, Berkshire</span></div>
+                <div class="bio-item"><span class="bio-label">Parents:</span><span class="bio-value">—</span></div>
+                <div class="bio-item"><span class="bio-label">Siblings:</span><span class="bio-value">—</span></div>
+                <div class="bio-item"><span class="bio-label">Spouse:</span><span class="bio-value">—</span></div>
+                <div class="bio-item"><span class="bio-label">Children:</span><span class="bio-value">—</span></div>
+                <div class="bio-item"><span class="bio-label">Other names:</span><span class="bio-value">OM (Order of Merit)</span></div>
+                <div class="bio-item"><span class="bio-label">Extra profession:</span><span class="bio-value">Novelist, children's author</span></div>
+                <div class="bio-item"><span class="bio-label">Related persons:</span><span class="bio-value"><a href="https://en.wikipedia.org/wiki/Robert_Bridges" target="_blank">Robert Bridges</a> (predecessor and mentor), <a href="https://en.wikipedia.org/wiki/W._B._Yeats" target="_blank">W.B. Yeats</a> (contemporary)</span></div>
+            </div>
+            <div class="poet-works">
+                <span class="works-label">Famous works:</span>
+                <span class="works-list"><em>Salt-Water Ballads</em> ("Sea Fever," "Cargoes"), <em>The Everlasting Mercy</em>, <em>The Midnight Folk</em>, <em>The Box of Delights</em></span>
+            </div>
+            <div class="poet-note">
+                <strong>Note:</strong> Masefield was a poet of the sea who also wrote beloved children's novels. He served as laureate for 37 years — the second-longest after Tennyson. He was admitted to the Order of Merit in 1935.
+            </div>
+        </div>
+        <div class="poet-portrait">
+            <a href="https://en.wikipedia.org/wiki/John_Masefield" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/John_Masefield_1916.jpg/220px-John_Masefield_1916.jpg" alt="Portrait of John Masefield" loading="lazy" onerror="this.style.display='none'">
+            </a>
+            <a href="https://en.wikipedia.org/wiki/John_Masefield" target="_blank" class="wiki-link-img">&#128279; Wikipedia</a>
+        </div>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- 16. CECIL DAY-LEWIS                       -->
+    <!-- ========================================== -->
+    <div class="poet-entry">
+        <div class="poet-main">
+            <div class="poet-header">
+                <span class="name"><a href="https://en.wikipedia.org/wiki/Cecil_Day-Lewis" target="_blank">Cecil Day-Lewis</a></span>
+                <span class="lifespan">(1904–1972)</span>
+                <span class="term">1968 – 1972</span>
+            </div>
+            <div class="bio-grid">
+                <div class="bio-item"><span class="bio-label">Predecessor:</span><span class="bio-value"><a href="https://en.wikipedia.org/wiki/John_Masefield" target="_blank">John Masefield</a></span></div>
+                <div class="bio-item"><span class="bio-label">Successor:</span><span class="bio-value"><a href="https://en.wikipedia.org/wiki/John_Betjeman" target="_blank">John Betjeman</a></span></div>
+                <div class="bio-item"><span class="bio-label">Duration:</span><span class="bio-value">4 years</span></div>
+                <div class="bio-item"><span class="bio-label">Monarch:</span><span class="bio-value">Elizabeth II</span></div>
+                <div class="bio-item"><span class="bio-label">Born:</span><span class="bio-value">27 April 1904, Ballintubbert, County Leix, Ireland</span></div>
+                <div class="bio-item"><span class="bio-label">Died:</span><span class="bio-value">22 May 1972, Hadley Wood, Hertfordshire</span></div>
+                <div class="bio-item"><span class="bio-label">Parents:</span><span class="bio-value">Clergyman father</span></div>
+                <div class="bio-item"><span class="bio-label">Siblings:</span><span class="bio-value">—</span></div>
+                <div class="bio-item"><span class="bio-label">Spouse:</span><span class="bio-value">—</span></div>
+                <div class="bio-item"><span class="bio-label">Children:</span><span class="bio-value">—</span></div>
+                <div class="bio-item"><span class="bio-label">Other names:</span><span class="bio-value">Nicholas Blake (detective fiction pen name)</span></div>
+                <div class="bio-item"><span class="bio-label">Extra profession:</span><span class="bio-value">Detective novelist, critic</span></div>
+                <div class="bio-item"><span class="bio-label">Related persons:</span><span class="bio-value"><a href="https://en.wikipedia.org/wiki/W._H._Auden" target="_blank">W.H. Auden</a>, <a href="https://en.wikipedia.org/wiki/Stephen_Spender" target="_blank">Stephen Spender</a>, <a href="https://en.wikipedia.org/wiki/Louis_MacNeice" target="_blank">Louis MacNeice</a> (The Auden Group / Thirties poets)</span></div>
+            </div>
+            <div class="poet-works">
+                <span class="works-label">Famous works:</span>
+                <span class="works-list"><em>Transitional Poem</em>, <em>The Magnetic Mountain</em>, detective novels as Nicholas Blake (e.g., <em>The Beast Must Die</em>)</span>
+            </div>
+            <div class="poet-note">
+                <strong>Note:</strong> Day-Lewis was one of the leading British poets of the 1930s, known for his left-wing political poetry before turning to more traditional forms. He also wrote bestselling detective fiction.
+            </div>
+        </div>
+        <div class="poet-portrait">
+            <a href="https://en.wikipedia.org/wiki/Cecil_Day-Lewis" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Cecil_Day-Lewis.jpg/220px-Cecil_Day-Lewis.jpg" alt="Portrait of Cecil Day-Lewis" loading="lazy" onerror="this.style.display='none'">
+            </a>
+            <a href="https://en.wikipedia.org/wiki/Cecil_Day-Lewis" target="_blank" class="wiki-link-img">&#128279; Wikipedia</a>
+        </div>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- 17. JOHN BETJEMAN                         -->
+    <!-- ========================================== -->
+    <div class="poet-entry">
+        <div class="poet-main">
+            <div class="poet-header">
+                <span class="name"><a href="https://en.wikipedia.org/wiki/John_Betjeman" target="_blank">John Betjeman</a></span>
+                <span class="lifespan">(1906–1984)</span>
+                <span class="term">1972 – 1984</span>
+                <span class="badge">Sir John Betjeman</span>
+            </div>
+            <div class="bio-grid">
+                <div class="bio-item"><span class="bio-label">Predecessor:</span><span class="bio-value"><a href="https://en.wikipedia.org/wiki/Cecil_Day-Lewis" target="_blank">Cecil Day-Lewis</a></span></div>
+                <div class="bio-item"><span class="bio-label">Successor:</span><span class="bio-value"><a href="https://en.wikipedia.org/wiki/Ted_Hughes" target="_blank">Ted Hughes</a></span></div>
+                <div class="bio-item"><span class="bio-label">Duration:</span><span class="bio-value">12 years</span></div>
+                <div class="bio-item"><span class="bio-label">Monarch:</span><span class="bio-value">Elizabeth II</span></div>
+                <div class="bio-item"><span class="bio-label">Born:</span><span class="bio-value">1906</span></div>
+                <div class="bio-item"><span class="bio-label">Died:</span><span class="bio-value">19 May 1984</span></div>
+                <div class="bio-item"><span class="bio-label">Parents:</span><span class="bio-value">—</span></div>
+                <div class="bio-item"><span class="bio-label">Siblings:</span><span class="bio-value">—</span></div>
+                <div class="bio-item"><span class="bio-label">Spouse:</span><span class="bio-value">—</span></div>
+                <div class="bio-item"><span class="bio-label">Children:</span><span class="bio-value">—</span></div>
+                <div class="bio-item"><span class="bio-label">Other names:</span><span class="bio-value">Knighted in 1969</span></div>
+                <div class="bio-item"><span class="bio-label">Extra profession:</span><span class="bio-value">Television presenter, architectural historian</span></div>
+                <div class="bio-item"><span class="bio-label">Related persons:</span><span class="bio-value"><a href="https://en.wikipedia.org/wiki/Philip_Larkin" target="_blank">Philip Larkin</a> (friend and protégé; Betjeman championed his work)</span></div>
+            </div>
+            <div class="poet-works">
+                <span class="works-label">Famous works:</span>
+                <span class="works-list">"Slough," "A Subaltern's Love-song," <em>Summoned by Bells</em> (autobiographical verse), television series on British architecture</span>
+            </div>
+            <div class="poet-note">
+                <strong>Note:</strong> Betjeman was probably the 20th century's most popular Poet Laureate. He was a beloved national figure, known for his nostalgic poetry and passionate defence of Victorian architecture. He suffered from Parkinson's disease in his later years.
+            </div>
+        </div>
+        <div class="poet-portrait">
+            <a href="https://en.wikipedia.org/wiki/John_Betjeman" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/John_Betjeman_%281906-1984%29.jpg/220px-John_Betjeman_%281906-1984%29.jpg" alt="Portrait of John Betjeman" loading="lazy" onerror="this.style.display='none'">
+            </a>
+            <a href="https://en.wikipedia.org/wiki/John_Betjeman" target="_blank" class="wiki-link-img">&#128279; Wikipedia</a>
+        </div>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- 18. TED HUGHES                            -->
+    <!-- ========================================== -->
+    <div class="poet-entry">
+        <div class="poet-main">
+            <div class="poet-header">
+                <span class="name"><a href="https://en.wikipedia.org/wiki/Ted_Hughes" target="_blank">Ted Hughes</a></span>
+                <span class="lifespan">(1930–1998)</span>
+                <span class="term">1984 – 1998</span>
+            </div>
+            <div class="bio-grid">
+                <div class="bio-item"><span class="bio-label">Predecessor:</span><span class="bio-value"><a href="https://en.wikipedia.org/wiki/John_Betjeman" target="_blank">John Betjeman</a></span></div>
+                <div class="bio-item"><span class="bio-label">Successor:</span><span class="bio-value"><a href="https://en.wikipedia.org/wiki/Andrew_Motion" target="_blank">Andrew Motion</a></span></div>
+                <div class="bio-item"><span class="bio-label">Duration:</span><span class="bio-value">14 years</span></div>
+                <div class="bio-item"><span class="bio-label">Monarch:</span><span class="bio-value">Elizabeth II</span></div>
+                <div class="bio-item"><span class="bio-label">Born:</span><span class="bio-value">17 August 1930</span></div>
+                <div class="bio-item"><span class="bio-label">Died:</span><span class="bio-value">28 October 1998</span></div>
+                <div class="bio-item"><span class="bio-label">Parents:</span><span class="bio-value">Son of a carpenter</span></div>
+                <div class="bio-item"><span class="bio-label">Siblings:</span><span class="bio-value">—</span></div>
+                <div class="bio-item"><span class="bio-label">Spouse:</span><span class="bio-value">Sylvia Plath (m. 1956, separated 1962)</span></div>
+                <div class="bio-item"><span class="bio-label">Children:</span><span class="bio-value">—</span></div>
+                <div class="bio-item"><span class="bio-label">Other names:</span><span class="bio-value">OM (Order of Merit)</span></div>
+                <div class="bio-item"><span class="bio-label">Extra profession:</span><span class="bio-value">Playwright, translator</span></div>
+                <div class="bio-item"><span class="bio-label">Related persons:</span><span class="bio-value"><a href="https://en.wikipedia.org/wiki/Sylvia_Plath" target="_blank">Sylvia Plath</a> (spouse), <a href="https://en.wikipedia.org/wiki/Seamus_Heaney" target="_blank">Seamus Heaney</a> (close friend and mutual admirer)</span></div>
+            </div>
+            <div class="poet-works">
+                <span class="works-label">Famous works:</span>
+                <span class="works-list"><em>The Hawk in the Rain</em>, <em>Lupercal</em>, <em>Crow</em>, <em>Birthday Letters</em>, <em>Tales from Ovid</em></span>
+            </div>
+            <div class="poet-note">
+                <strong>Note:</strong> Hughes is routinely ranked as one of the best poets of his generation. He rekindled the tradition of receiving wine with the laureateship, receiving 720 bottles of sherry. His marriage to Sylvia Plath and her subsequent suicide cast a long shadow over his life and work.
+            </div>
+        </div>
+        <div class="poet-portrait">
+            <a href="https://en.wikipedia.org/wiki/Ted_Hughes" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Ted_Hughes_%28crop%29.jpg/220px-Ted_Hughes_%28crop%29.jpg" alt="Portrait of Ted Hughes" loading="lazy" onerror="this.style.display='none'">
+            </a>
+            <a href="https://en.wikipedia.org/wiki/Ted_Hughes" target="_blank" class="wiki-link-img">&#128279; Wikipedia</a>
+        </div>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- 19. ANDREW MOTION                         -->
+    <!-- ========================================== -->
+    <div class="poet-entry">
+        <div class="poet-main">
+            <div class="poet-header">
+                <span class="name"><a href="https://en.wikipedia.org/wiki/Andrew_Motion" target="_blank">Andrew Motion</a></span>
+                <span class="lifespan">(1952–)</span>
+                <span class="term">1999 – 2009</span>
+                <span class="badge">Sir Andrew Motion</span>
+            </div>
+            <div class="bio-grid">
+                <div class="bio-item"><span class="bio-label">Predecessor:</span><span class="bio-value"><a href="https://en.wikipedia.org/wiki/Ted_Hughes" target="_blank">Ted Hughes</a></span></div>
+                <div class="bio-item"><span class="bio-label">Successor:</span><span class="bio-value"><a href="https://en.wikipedia.org/wiki/Carol_Ann_Duffy" target="_blank">Carol Ann Duffy</a></span></div>
+                <div class="bio-item"><span class="bio-label">Duration:</span><span class="bio-value">10 years (fixed term)</span></div>
+                <div class="bio-item"><span class="bio-label">Monarch:</span><span class="bio-value">Elizabeth II</span></div>
+                <div class="bio-item"><span class="bio-label">Born:</span><span class="bio-value">26 October 1952, London</span></div>
+                <div class="bio-item"><span class="bio-label">Died:</span><span class="bio-value">—</span></div>
+                <div class="bio-item"><span class="bio-label">Parents:</span><span class="bio-value">—</span></div>
+                <div class="bio-item"><span class="bio-label">Siblings:</span><span class="bio-value">—</span></div>
+                <div class="bio-item"><span class="bio-label">Spouse:</span><span class="bio-value">—</span></div>
+                <div class="bio-item"><span class="bio-label">Children:</span><span class="bio-value">—</span></div>
+                <div class="bio-item"><span class="bio-label">Other names:</span><span class="bio-value">Knighted</span></div>
+                <div class="bio-item"><span class="bio-label">Extra profession:</span><span class="bio-value">Biographer, novelist, professor</span></div>
+                <div class="bio-item"><span class="bio-label">Related persons:</span><span class="bio-value"><a href="https://en.wikipedia.org/wiki/Philip_Larkin" target="_blank">Philip Larkin</a> (subject of his acclaimed biography)</span></div>
+            </div>
+            <div class="poet-works">
+                <span class="works-label">Famous works:</span>
+                <span class="works-list"><em>The Pleasure Steamers</em>, <em>Dangerous Play: Poems 1974–1984</em>, <em>Natural Causes</em>, biographies of Philip Larkin and John Keats</span>
+            </div>
+            <div class="poet-note">
+                <strong>Note:</strong> Motion was the <strong>first Poet Laureate to serve a fixed ten-year term</strong> (1999–2009), a change from the previous life-long appointments. He is also a celebrated biographer and novelist.
+            </div>
+        </div>
+        <div class="poet-portrait">
+            <a href="https://en.wikipedia.org/wiki/Andrew_Motion" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Andrew_Motion_poet.jpg/220px-Andrew_Motion_poet.jpg" alt="Portrait of Andrew Motion" loading="lazy" onerror="this.style.display='none'">
+            </a>
+            <a href="https://en.wikipedia.org/wiki/Andrew_Motion" target="_blank" class="wiki-link-img">&#128279; Wikipedia</a>
+        </div>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- 20. CAROL ANN DUFFY                       -->
+    <!-- ========================================== -->
+    <div class="poet-entry">
+        <div class="poet-main">
+            <div class="poet-header">
+                <span class="name"><a href="https://en.wikipedia.org/wiki/Carol_Ann_Duffy" target="_blank">Carol Ann Duffy</a></span>
+                <span class="lifespan">(1955–)</span>
+                <span class="term">2009 – 2019</span>
+                <span class="badge">&#9733; First Woman Laureate</span>
+            </div>
+            <div class="bio-grid">
+                <div class="bio-item"><span class="bio-label">Predecessor:</span><span class="bio-value"><a href="https://en.wikipedia.org/wiki/Andrew_Motion" target="_blank">Andrew Motion</a></span></div>
+                <div class="bio-item"><span class="bio-label">Successor:</span><span class="bio-value"><a href="https://en.wikipedia.org/wiki/Simon_Armitage" target="_blank">Simon Armitage</a></span></div>
+                <div class="bio-item"><span class="bio-label">Duration:</span><span class="bio-value">10 years (fixed term)</span></div>
+                <div class="bio-item"><span class="bio-label">Monarch:</span><span class="bio-value">Elizabeth II</span></div>
+                <div class="bio-item"><span class="bio-label">Born:</span><span class="bio-value">23 December 1955, Glasgow, Scotland</span></div>
+                <div class="bio-item"><span class="bio-label">Died:</span><span class="bio-value">—</span></div>
+                <div class="bio-item"><span class="bio-label">Parents:</span><span class="bio-value">—</span></div>
+                <div class="bio-item"><span class="bio-label">Siblings:</span><span class="bio-value">—</span></div>
+                <div class="bio-item"><span class="bio-label">Spouse:</span><span class="bio-value">—</span></div>
+                <div class="bio-item"><span class="bio-label">Children:</span><span class="bio-value">—</span></div>
+                <div class="bio-item"><span class="bio-label">Other names:</span><span class="bio-value">Dame Carol Ann Duffy</span></div>
+                <div class="bio-item"><span class="bio-label">Extra profession:</span><span class="bio-value">Playwright, professor of contemporary poetry</span></div>
+                <div class="bio-item"><span class="bio-label">Related persons:</span><span class="bio-value"><a href="https://en.wikipedia.org/wiki/Jackie_Kay" target="_blank">Jackie Kay</a> (long-term partner, fellow poet)</span></div>
+            </div>
+            <div class="poet-works">
+                <span class="works-label">Famous works:</span>
+                <span class="works-list"><em>Standing Female Nude</em> (1985), <em>The World's Wife</em>, <em>Rapture</em>, <em>Feminine Gospels</em></span>
+            </div>
+            <div class="poet-note">
+                <strong>Note:</strong> Duffy made history as the <strong>first woman</strong>, the <strong>first Scot</strong>, and the <strong>first openly LGBTQ+</strong> person to hold the laureateship. Her poetry is known for its accessible, conversational language and engagement with gender and oppression.
+            </div>
+        </div>
+        <div class="poet-portrait">
+            <a href="https://en.wikipedia.org/wiki/Carol_Ann_Duffy" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Carol_Ann_Duffy_2018.jpg/220px-Carol_Ann_Duffy_2018.jpg" alt="Portrait of Carol Ann Duffy" loading="lazy" onerror="this.style.display='none'">
+            </a>
+            <a href="https://en.wikipedia.org/wiki/Carol_Ann_Duffy" target="_blank" class="wiki-link-img">&#128279; Wikipedia</a>
+        </div>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- 21. SIMON ARMITAGE                        -->
+    <!-- ========================================== -->
+    <div class="poet-entry">
+        <div class="poet-main">
+            <div class="poet-header">
+                <span class="name"><a href="https://en.wikipedia.org/wiki/Simon_Armitage" target="_blank">Simon Armitage</a></span>
+                <span class="lifespan">(1963–)</span>
+                <span class="term">2019 – present</span>
+                <span class="badge last">&#9733; Current Laureate</span>
+            </div>
+            <div class="bio-grid">
+                <div class="bio-item"><span class="bio-label">Predecessor:</span><span class="bio-value"><a href="https://en.wikipedia.org/wiki/Carol_Ann_Duffy" target="_blank">Carol Ann Duffy</a></span></div>
+                <div class="bio-item"><span class="bio-label">Successor:</span><span class="bio-value">— <em>incumbent</em></span></div>
+                <div class="bio-item"><span class="bio-label">Duration:</span><span class="bio-value">2019 – 2029 (10-year term)</span></div>
+                <div class="bio-item"><span class="bio-label">Monarch:</span><span class="bio-value">Elizabeth II &rarr; Charles III</span></div>
+                <div class="bio-item"><span class="bio-label">Born:</span><span class="bio-value">26 May 1963, Huddersfield, Yorkshire</span></div>
+                <div class="bio-item"><span class="bio-label">Died:</span><span class="bio-value">—</span></div>
+                <div class="bio-item"><span class="bio-label">Parents:</span><span class="bio-value">—</span></div>
+                <div class="bio-item"><span class="bio-label">Siblings:</span><span class="bio-value">—</span></div>
+                <div class="bio-item"><span class="bio-label">Spouse:</span><span class="bio-value">—</span></div>
+                <div class="bio-item"><span class="bio-label">Children:</span><span class="bio-value">—</span></div>
+                <div class="bio-item"><span class="bio-label">Other names:</span><span class="bio-value">CBE, FRSL</span></div>
+                <div class="bio-item"><span class="bio-label">Extra profession:</span><span class="bio-value">Playwright, novelist, translator, musician, professor</span></div>
+                <div class="bio-item"><span class="bio-label">Related persons:</span><span class="bio-value"><a href="https://en.wikipedia.org/wiki/Ted_Hughes" target="_blank">Ted Hughes</a> (major influence), <a href="https://en.wikipedia.org/wiki/Philip_Larkin" target="_blank">Philip Larkin</a> (major influence)</span></div>
+            </div>
+            <div class="poet-works">
+                <span class="works-label">Famous works:</span>
+                <span class="works-list"><em>Zoom!</em> (1989), <em>Kid</em>, <em>Book of Matches</em>, <em>Sir Gawain and the Green Knight</em> (translation), <em>All Points North</em></span>
+            </div>
+            <div class="poet-note">
+                <strong>Note:</strong> Armitage is the current Poet Laureate, appointed for a ten-year term in 2019. His poetry is known for its accessibility and attunement to modern life and vernacular language. He is also a professor of poetry at the University of Leeds.
+            </div>
+        </div>
+        <div class="poet-portrait">
+            <a href="https://en.wikipedia.org/wiki/Simon_Armitage" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Simon_Armitage_2018.jpg/220px-Simon_Armitage_2018.jpg" alt="Portrait of Simon Armitage" loading="lazy" onerror="this.style.display='none'">
+            </a>
+            <a href="https://en.wikipedia.org/wiki/Simon_Armitage" target="_blank" class="wiki-link-img">&#128279; Wikipedia</a>
+        </div>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- FOOTER                                     -->
+    <!-- ========================================== -->
+    <div class="footer-note">
+        <p>
+            <em>"The poet laureate is not a monarch, but a servant — of the language and of the nation."</em>
+        </p>
+        <p style="margin-top: 0.6rem;">
+            &#128214; A complete reference guide to the Poets Laureate of the United Kingdom.<br />
+            Sources: Wikipedia, Britannica, Westminster Abbey, Poetry Foundation &amp; the Dictionary of National Biography.
+        </p>
+        <p style="margin-top: 0.8rem; font-size: 0.8rem; color: #a69b8e;">
+            &copy; 2026 · A celebration of the poet's crown
+        </p>
+    </div>
+
+</div>
+
+</body>
+</html>
