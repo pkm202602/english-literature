@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nobel Prize in Literature Archive (1901–Present)</title>
+    <!-- Tailwind CSS CDN for modern styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-slate-900 text-slate-100 min-h-screen">
+
+    <!-- Header Section -->
+    <header class="bg-slate-800 border-b border-slate-700 py-8 shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-3xl sm:text-4xl font-bold tracking-tight text-amber-400">Nobel Prize in Literature Archive</h1>
+            <p class="mt-2 text-slate-400 text-sm sm:text-base">A comprehensive GitHub repository showcasing laureates, context, works, and curation insights.</p>
+            
+            <!-- Search Bar -->
+            <div class="mt-6 max-w-md mx-auto">
+                <input type="text" id="searchInput" placeholder="Search by year, author, or keyword..." 
+                    class="w-full px-4 py-2 bg-slate-900 border border-slate-700 rounded-lg focus:outline-none focus:border-amber-400 text-slate-200 placeholder-slate-500 text-sm">
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="overflow-x-auto bg-slate-800 rounded-xl border border-slate-700 shadow-xl">
+            <table class="w-full text-left border-collapse" id="nobelTable">
+                <thead>
+                    <tr class="bg-slate-700/50 text-slate-300 uppercase text-xs tracking-wider border-b border-slate-700">
+                        <th class="py-4 px-4 font-semibold">Year</th>
+                        <th class="py-4 px-4 font-semibold">Laureate</th>
+                        <th class="py-4 px-4 font-semibold">Timeline Context</th>
+                        <th class="py-4 px-4 font-semibold">Nobel Award Work / Motivation</th>
+                        <th class="py-4 px-4 font-semibold">Notable Other Works</th>
+                        <th class="py-4 px-4 font-semibold text-amber-400">AI Reading Suggestion</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-700 text-sm" id="tableBody">
+                    <!-- Data injected dynamically via JavaScript -->
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-800 border-t border-slate-700 py-6 text-center text-slate-500 text-xs">
+        <p>Hosted on GitHub Pages • Built for Literature Enthusiasts</p>
+    </footer>
+
+    <!-- JavaScript Dataset & Logic -->
+    <script>
+        const nobelData = [
+            {
+                year: 2025,
+                name: "László Krasznahorkai",
+                prev: "Han Kang (2024)",
+                next: "Pending / 2026",
+                work: "“for his compelling and visionary oeuvre that, in the midst of apocalyptic terror, reaffirms the power of art”",
+                other: "Novels: Satantango, The Melancholy of Resistance, Seiobo There Below",
+                suggestion: "Start with Satantango to experience his signature hypnotic, long-sentence prose style dealing with dystopian despair."
+            },
+            {
+                year: 2024,
+                name: "Han Kang",
+                prev: "Jon Fosse (2023)",
+                next: "László Krasznahorkai (2025)",
+                work: "“for her intense poetic prose that confronts historical traumas and exposes the fragility of human life”",
+                other: "Novels: The Vegetarian, Human Acts, Greek Lessons",
+                suggestion: "Read The Vegetarian first; it is a stunning, surreal exploration of bodily autonomy and societal rejection."
+            },
+            {
+                year: 2023,
+                name: "Jon Fosse",
+                prev: "Annie Ernaux (2022)",
+                next: "Han Kang (2024)",
+                work: "“for his innovative plays and prose which give voice to the unsayable”",
+                other: "Novels & Plays: Septology, Melancholy, A Shining, Someone is Going to Come (Play)",
+                suggestion: "Dive into Septology for a mesmerizing, flowing stream-of-consciousness narrative without punctuation breaks."
+            },
+            {
+                year: 2022,
+                name: "Annie Ernaux",
+                prev: "Abdulrazak Gurnah (2021)",
+                next: "Jon Fosse (2023)",
+                work: "“for the courage and clinical acuity with which she uncovers the roots, estrangements and collective restraints of personal memory”",
+                other: "Autobiographical Works: The Years, A Man's Place, Happening",
+                suggestion: "The Years is an absolute masterpiece blending collective history with intimate autobiography."
+            },
+            {
+                year: 2021,
+                name: "Abdulrazak Gurnah",
+                prev: "Louise Glück (2020)",
+                next: "Annie Ernaux (2022)",
+                work: "“for his uncompromising and compassionate penetration of the effects of colonialism and the fate of the refugee in the gulf between cultures and continents”",
+                other: "Novels: Paradise, By the Sea, Desertion",
+                suggestion: "Paradise offers an evocative look at East Africa on the eve of World War I through the eyes of a young boy."
+            },
+            {
+                year: 2020,
+                name: "Louise Glück",
+                prev: "Peter Handke (2019)",
+                next: "Abdulrazak Gurnah (2021)",
+                work: "“for her unmistakable poetic voice that with austere beauty makes individual existence universal”",
+                other: "Poetry Collections: The Wild Iris, Averno, Vita Nova",
+                suggestion: "Read The Wild Iris, a breathtaking poetry collection structured as a dialogue between flowers, earth, and a gardener."
+            },
+            {
+                year: 2019,
+                name: "Peter Handke",
+                prev: "Olga Tokarczuk (2018)",
+                next: "Louise Glück (2020)",
+                work: "“for an influential work that with linguistic ingenuity has explored the periphery and the specificity of human experience”",
+                other: "Novels & Dramas: The Goalkeeper's Fear of the Penalty, Kaspar (Play), Slow Homecoming",
+                suggestion: "Examine his early novella The Goalkeeper's Fear of the Penalty for a fascinating study in psychological alienation."
+            },
+            {
+                year: 2018,
+                name: "Olga Tokarczuk",
+                prev: "Kazuo Ishiguro (2017)",
+                next: "Peter Handke (2019)",
+                work: "“for a narrative imagination that with encyclopedic passion represents the crossing of boundaries as a form of life”",
+                other: "Novels: Drive Your Plow Over the Bones of the Dead, Primeval and Other Times, The Books of Jacob",
+                suggestion: "Drive Your Plow Over the Bones of the Dead is an eccentric, thrilling eco-noir mystery wrapped in dark philosophical humor."
+            },
+            {
+                year: 2017,
+                name: "Kazuo Ishiguro",
+                prev: "Bob Dylan (2016)",
+                next: "Olga Tokarczuk (2018)",
+                work: "“who, in novels of great emotional force, has uncovered the abyss beneath our illusory sense of connection with the world”",
+                other: "Novels: The Remains of the Day, Never Let Me Go, Klara and the Sun",
+                suggestion: "Never Let Me Go is an emotionally devastating speculative novel about memory, mortality, and humanity."
+            },
+            {
+                year: 2016,
+                name: "Bob Dylan",
+                prev: "Svetlana Alexievich (2015)",
+                next: "Kazuo Ishiguro (2017)",
+                work: "“for having created new poetic expressions within the great American song tradition”",
+                other: "Songs & Prose Poetry: Blowin' in the Wind, The Times They Are a-Changin', Tarantula",
+                suggestion: "Listen to his legendary 1960s acoustic records to appreciate how lyrical poetry and folk music merge seamlessly."
+            }
+        ];
+
+        const tableBody = document.getElementById('tableBody');
+        const searchInput = document.getElementById('searchInput');
+
+        function renderTable(data) {
+            tableBody.innerHTML = '';
+            if (data.length === 0) {
+                tableBody.innerHTML = `<tr><td colspan="6" class="py-6 text-center text-slate-400">No matching laureates found.</td></tr>`;
+                return;
+            }
+
+            data.forEach(item => {
+                const row = document.createElement('tr');
+                row.className = "hover:bg-slate-700/30 transition-colors";
+                row.innerHTML = `
+                    <td class="py-4 px-4 font-bold text-amber-400 align-top">${item.year}</td>
+                    <td class="py-4 px-4 font-semibold text-white align-top">${item.name}</td>
+                    <td class="py-4 px-4 text-slate-300 text-xs align-top">
+                        <span class="block text-slate-400">Prev: ${item.prev}</span>
+                        <span class="block text-slate-400 mt-1">Next: ${item.next}</span>
+                    </td>
+                    <td class="py-4 px-4 text-slate-300 italic text-xs align-top">${item.work}</td>
+                    <td class="py-4 px-4 text-slate-300 text-xs align-top">${item.other}</td>
+                    <td class="py-4 px-4 text-emerald-400 text-xs font-medium align-top">${item.suggestion}</td>
+                `;
+                tableBody.appendChild(row);
+            });
+        }
+
+        // Initial Render
+        renderTable(nobelData);
+
+        // Search Filter Logic
+        searchInput.addEventListener('input', (e) => {
+            const query = e.target.value.toLowerCase();
+            const filtered = nobelData.filter(item => 
+                item.year.toString().includes(query) ||
+                item.name.toLowerCase().includes(query) ||
+                item.work.toLowerCase().includes(query) ||
+                item.other.toLowerCase().includes(query)
+            );
+            renderTable(filtered);
+        });
+    </script>
+</body>
+</html>
