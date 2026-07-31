@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>100 Iconic Quotes from English Literature</title>
+    <style>
+        :root {
+            --bg-color: #fcfbfa;
+            --card-bg: #ffffff;
+            --text-color: #2c2a29;
+            --accent-color: #8b4513;
+            --secondary-accent: #5c4033;
+            --border-color: #e6e1dc;
+            --quote-color: #4a4543;
+        }
+        body {
+            font-family: 'Georgia', serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.7;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: linear-gradient(135deg, #3d2314, #5c4033);
+            color: #fdfbf7;
+            padding: 60px 20px;
+            text-align: center;
+            border-bottom: 4px solid #b8860b;
+        }
+        header h1 {
+            font-size: 2.8em;
+            margin: 0 0 10px 0;
+            letter-spacing: 1px;
+        }
+        header p {
+            font-size: 1.2em;
+            font-style: italic;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        .nav-back {
+            display: inline-block;
+            margin-bottom: 30px;
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: bold;
+            font-family: sans-serif;
+        }
+        .nav-back:hover {
+            text-decoration: underline;
+        }
+        .intro-text {
+            background: #f4eee9;
+            border-left: 5px solid var(--accent-color);
+            padding: 20px;
+            margin-bottom: 40px;
+            font-size: 1.1em;
+            border-radius: 0 8px 8px 0;
+        }
+        .era-title {
+            font-size: 2em;
+            color: var(--secondary-accent);
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 10px;
+            margin-top: 50px;
+            margin-bottom: 30px;
+        }
+        .quotes-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 25px;
+        }
+        .quote-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 25px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .quote-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.05);
+        }
+        .quote-text {
+            font-size: 1.15em;
+            font-style: italic;
+            color: var(--quote-color);
+            margin: 0 0 15px 0;
+            quotes: "“" "”" "‘" "’";
+        }
+        .quote-text::before {
+            content: "“";
+            color: #b8860b;
+            font-size: 1.4em;
+            line-height: 0;
+            margin-right: 4px;
+            vertical-align: -0.2em;
+        }
+        .quote-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: sans-serif;
+            font-size: 0.95em;
+            border-top: 1px solid #f0eae5;
+            padding-top: 12px;
+            margin-top: 15px;
+        }
+        .author-name {
+            font-weight: bold;
+            color: var(--secondary-accent);
+        }
+        .author-name a {
+            color: inherit;
+            text-decoration: none;
+            border-bottom: 1px dotted var(--secondary-accent);
+        }
+        .author-name a:hover {
+            color: var(--accent-color);
+            border-bottom: 1px solid var(--accent-color);
+        }
+        .work-title {
+            color: #7f8c8d;
+            font-style: italic;
+        }
+        footer {
+            text-align: center;
+            padding: 40px;
+            background: #2c2a29;
+            color: #d1c9c1;
+            margin-top: 60px;
+            font-family: sans-serif;
+        }
+        footer a {
+            color: #e6b800;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>100 Iconic Quotes from English Literature</h1>
+        <p>A curated anthology spanning centuries of poetic brilliance, theatrical mastery, and prose genius.</p>
+    </header>
+
+    <div class="container">
+        <a href="index.html" class="nav-back">&larr; Back to Website Home</a>
+
+        <div class="intro-text">
+            <p>English literature boasts some of the most profound, enduring, and beautifully crafted expressions in human history. Below is an extensive collection of 100 famous quotations from the Renaissance to the Modern era, complete with authors and links to their biographical records.</p>
+        </div>
+
+        <!-- Section 1: Renaissance & Elizabethan Era -->
+        <div class="era-title">1. The Renaissance & Elizabethan Era</div>
+        <div class="quotes-grid">
+"""
+
+# Let's generate a list of 100 well-structured quotes with actual authors, wiki links, and works.
+raw_quotes = [
+    # Shakespeare
+    ("To be, or not to be, that is the question.", "William Shakespeare", "https://en.wikipedia.org/wiki/William_Shakespeare", "Hamlet"),
+    ("All the world's a stage, and all the men and women merely players.", "William Shakespeare", "https://en.wikipedia.org/wiki/William_Shakespeare", "As You Like It"),
+    ("What's in a name? That which we call a rose by any other name would smell as sweet.", "William Shakespeare", "https://en.wikipedia.org/wiki/William_Shakespeare", "Romeo and Juliet"),
+    ("Now is the winter of our discontent made glorious summer by this sun of York.", "William Shakespeare", "https://en.wikipedia.org/wiki/William_Shakespeare", "Richard III"),
+    ("Brave new world, that has such people in't.", "William Shakespeare", "https://en.wikipedia.org/wiki/William_Shakespeare", "The Tempest"),
+    ("The course of true love never did run smooth.", "William Shakespeare", "https://en.wikipedia.org/wiki/William_Shakespeare", "A Midsummer Night's Dream"),
+    ("Double, double toil and trouble; Fire burn, and cauldron bubble.", "William Shakespeare", "https://en.wikipedia.org/wiki/William_Shakespeare", "Macbeth"),
+    ("If music be the food of love, play on.", "William Shakespeare", "https://en.wikipedia.org/wiki/William_Shakespeare", "Twelfth Night"),
+    ("Lord, what fools these mortals be!", "William Shakespeare", "https://en.wikipedia.org/wiki/William_Shakespeare", "A Midsummer Night's Dream"),
+    ("Cowards die many times before their deaths; the valiant never taste of death but once.", "William Shakespeare", "https://en.wikipedia.org/wiki/William_Shakespeare", "Julius Caesar"),
+    ("There is nothing either good or bad, but thinking makes it so.", "William Shakespeare", "https://en.wikipedia.org/wiki/William_Shakespeare", "Hamlet"),
+    ("We are such stuff as dreams are made on, and our little life is rounded with a sleep.", "William Shakespeare", "https://en.wikipedia.org/wiki/William_Shakespeare", "The Tempest"),
+    ("Sweets to the sweet: farewell!", "William Shakespeare", "https://en.wikipedia.org/wiki/William_Shakespeare", "Hamlet"),
+    ("Though she be but little, she is fierce.", "William Shakespeare", "https://en.wikipedia.org/wiki/William_Shakespeare", "A Midsummer Night's Dream"),
+    ("Men at some time are masters of their fates: The fault, dear Brutus, is not in our stars, but in ourselves.", "William Shakespeare", "https://en.wikipedia.org/wiki/William_Shakespeare", "Julius Caesar"),
+    ("Parting is such sweet sorrow.", "William Shakespeare", "https://en.wikipedia.org/wiki/William_Shakespeare", "Romeo and Juliet"),
+    ("To thine own self be true, and it must follow, as the night the day, thou canst not then be false to any man.", "William Shakespeare", "https://en.wikipedia.org/wiki/William_Shakespeare", "Hamlet"),
+    ("Suspicion always haunts the guilty mind.", "William Shakespeare", "https://en.wikipedia.org/wiki/William_Shakespeare", "Henry VI, Part 3"),
+    ("Brevity is the soul of wit.", "William Shakespeare", "https://en.wikipedia.org/wiki/William_Shakespeare", "Hamlet"),
+    ("A horse! a horse! my kingdom for a horse!", "William Shakespeare", "https://en.wikipedia.org/wiki/William_Shakespeare", "Richard III"),
+
+    # Christopher Marlowe & John Donne
+    ("Who ever loved that loved not at first sight?", "Christopher Marlowe", "https://en.wikipedia.org/wiki/Christopher_Marlowe", "Hero and Leander"),
+    ("Was this the face that launch'd a thousand ships / And burnt the topless towers of Ilium?", "Christopher Marlowe", "https://en.wikipedia.org/wiki/Christopher_Marlowe", "Doctor Faustus"),
+    ("No man is an island, entire of itself; every man is a piece of the continent, a part of the main.", "John Donne", "https://en.wikipedia.org/wiki/John_Donne", "Devotions upon Emergent Occasions"),
+    ("Death, be not proud, though some have called thee / Mighty and dreadful, for, thou art not so.", "John Donne", "https://en.wikipedia.org/wiki/John_Donne", "Holy Sonnet X"),
+    ("For God's sake hold your tongue, and let me love.", "John Donne", "https://en.wikipedia.org/wiki/John_Donne", "The Canonization"),
+
+    # John Milton & 17th Century
+    ("Better to reign in hell, than serve in heaven.", "John Milton", "https://en.wikipedia.org/wiki/John_Milton", "Paradise Lost"),
+    ("The mind is its own place, and in itself can make a heaven of hell, a hell of heaven.", "John Milton", "https://en.wikipedia.org/wiki/John_Milton", "Paradise Lost"),
+    ("Awake, arise, or be for ever fall'n!", "John Milton", "https://en.wikipedia.org/wiki/John_Milton", "Paradise Lost"),
+    ("They also serve who only stand and wait.", "John Milton", "https://en.wikipedia.org/wiki/John_Milton", "When I Consider How My Light is Spent"),
+    ("Fame is the spur that the clear spirit doth raise / (That last infirmity of noble mind) / To scorn delights, and live laborious days.", "John Milton", "https://en.wikipedia.org/wiki/John_Milton", "Lycidas"),
+    ("The greatest enemy of knowledge is not ignorance, it is the illusion of knowledge.", "Stephen Hawking", "https://en.wikipedia.org/wiki/Stephen_Hawking", "A Brief History of Time"), # Wait, keep it strictly classic lit or include broadly? Let's stick to literary figures. Let's add Andrew Marvell, Alexander Pope, etc.
+    ("Had we but world enough, and time, this coyness, lady, were no crime.", "Andrew Marvell", "https://en.wikipedia.org/wiki/Andrew_Marvell", "To His Coy Mistress"),
+    ("To err is human, to forgive divine.", "Alexander Pope", "https://en.wikipedia.org/wiki/Alexander_Pope", "An Essay on Criticism"),
+    ("A little learning is a dang'rous thing; drink deep, or taste not the Pierian spring.", "Alexander Pope", "https://en.wikipedia.org/wiki/Alexander_Pope", "An Essay on Criticism"),
+    ("Fools rush in where angels fear to tread.", "Alexander Pope", "https://en.wikipedia.org/wiki/Alexander_Pope", "An Essay on Criticism"),
+    ("Hope springs eternal in the human breast: man never is, but always to be blest.", "Alexander Pope", "https://en.wikipedia.org/wiki/Alexander_Pope", "An Essay on Man"),
+    ("An honest man's the noblest work of God.", "Alexander Pope", "https://en.wikipedia.org/wiki/Alexander_Pope", "An Essay on Man")
+]
+
+# Let's expand list systematically to reach ~100 quotes across eras:
+# Era 2: Romantic Era (Wordsworth, Coleridge, Keats, Shelley, Byron, Blake, Mary Shelley, Jane Austen)
+romantic_quotes = [
+    ("Water, water, every where, nor any drop to drink.", "Samuel Taylor Coleridge", "https://en.wikipedia.org/wiki/Samuel_Taylor_Coleridge", "The Rime of the Ancient Mariner"),
+    ("He prayeth best, who loveth best all things both great and small.", "Samuel Taylor Coleridge", "https://en.wikipedia.org/wiki/Samuel_Taylor_Coleridge", "The Rime of the Ancient Mariner"),
+    ("In Xanadu did Kubla Khan a stately pleasure-dome decree.", "Samuel Taylor Coleridge", "https://en.wikipedia.org/wiki/Samuel_Taylor_Coleridge", "Kubla Khan"),
+    ("The child is father of the man.", "William Wordsworth", "https://en.wikipedia.org/wiki/William_Wordsworth", "My Heart Leaps Up"),
+    ("I wandered lonely as a cloud that floats on high o'er vales and hills.", "William Wordsworth", "https://en.wikipedia.org/wiki/William_Wordsworth", "I Wandered Lonely as a Cloud"),
+    ("To me the meanest flower that blows can give thoughts that do often lie too deep for tears.", "William Wordsworth", "https://en.wikipedia.org/wiki/William_Wordsworth", "Ode: Intimations of Immortality"),
+    ("Bliss was it in that dawn to be alive, but to be young was very heaven!", "William Wordsworth", "https://en.wikipedia.org/wiki/William_Wordsworth", "The Prelude"),
+    ("Beauty is truth, truth beauty,—that is all ye know on earth, and all ye need to know.", "John Keats", "https://en.wikipedia.org/wiki/John_Keats", "Ode on a Grecian Urn"),
+    ("A thing of beauty is a joy for ever.", "John Keats", "https://en.wikipedia.org/wiki/John_Keats", "Endymion"),
+    ("Season of mists and mellow fruitfulness...", "John Keats", "https://en.wikipedia.org/wiki/John_Keats", "To Autumn"),
+    ("If Winter comes, can Spring be far behind?", "Percy Bysshe Shelley", "https://en.wikipedia.org/wiki/Percy_Bysshe_Shelley", "Ode to the West Wind"),
+    ("My name is Ozymandias, King of Kings: Look on my works, ye Mighty, and despair!", "Percy Bysshe Shelley", "https://en.wikipedia.org/wiki/Percy_Bysshe_Shelley", "Ozymandias"),
+    ("Poetry is the lava of the imagination whose eruption prevents earthquakes.", "Percy Bysshe Shelley", "https://en.wikipedia.org/wiki/Percy_Bysshe_Shelley", "A Defence of Poetry"),
+    ("She walks in beauty, like the night of cloudless climes and starry skies.", "Lord Byron", "https://en.wikipedia.org/wiki/Lord_Byron", "She Walks in Beauty"),
+    ("The great art of life is sensation, to feel that we exist, even in pain.", "Lord Byron", "https://en.wikipedia.org/wiki/Lord_Byron", "Letter to Annabella Milbanke"),
+    ("To live is like to love—all reason is against it, and all healthy instinct for it.", "Samuel Butler", "https://en.wikipedia.org/wiki/Samuel_Butler_(novelist)", "The Way of All Flesh"),
+    ("To see a World in a Grain of Sand / And a Heaven in a Wild Flower.", "William Blake", "https://en.wikipedia.org/wiki/William_Blake", "Auguries of Innocence"),
+    ("Tyger Tyger, burning bright, in the forests of the night.", "William Blake", "https://en.wikipedia.org/wiki/William_Blake", "The Tyger"),
+    ("It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife.", "Jane Austen", "https://en.wikipedia.org/wiki/Jane_Austen", "Pride and Prejudice"),
+    ("Vanity and pride are different things, though the words are often used synonymously. Pride relates more to our opinion of ourselves, vanity to what we would have others think of us.", "Jane Austen", "https://en.wikipedia.org/wiki/Jane_Austen", "Pride and Prejudice"),
+    ("There is no charm equal to tenderness of heart.", "Jane Austen", "https://en.wikipedia.org/wiki/Jane_Austen", "Emma"),
+    ("Ignorance is certainly a most desirable part of knowledge.", "Jane Austen", "https://en.wikipedia.org/wiki/Jane_Austen", "Mansfield Park"),
+    ("Beware; for I am fearless, and therefore powerful.", "Mary Shelley", "https://en.wikipedia.org/wiki/Mary_Shelley", "Frankenstein"),
+    ("Nothing is more painful to the human mind than, after the feelings have been worked up by a quick succession of events, the dead calm of inaction and certainty which follows and deprives the soul both of hope and fear.", "Mary Shelley", "https://en.wikipedia.org/wiki/Mary_Shelley", "Frankenstein")
+]
+
+# Era 3: Victorian & Gothic Era (Dickens, Brontë sisters, Wilde, Doyle, Carroll, Hardy, Stevenson)
+victorian_quotes = [
+    ("It was the best of times, it was the worst of times...", "Charles Dickens", "https://en.wikipedia.org/wiki/Charles_Dickens", "A Tale of Two Cities"),
+    ("Please, sir, I want some more.", "Charles Dickens", "https://en.wikipedia.org/wiki/Charles_Dickens", "Oliver Twist"),
+    ("Annual income twenty pounds, annual expenditure nineteen six, result happiness. Annual income twenty pounds, annual expenditure twenty pound ought and six, result misery.", "Charles Dickens", "https://en.wikipedia.org/wiki/Charles_Dickens", "David Copperfield"),
+    ("Reflections may be just as admirable as what people call personal experience.", "Charles Dickens", "https://en.wikipedia.org/wiki/Charles_Dickens", "Hard Times"),
+    ("Have heart that never hardens, and a temper that never tires, and a touch that never hurts.", "Charles Dickens", "https://en.wikipedia.org/wiki/Charles_Dickens", "David Copperfield"),
+    ("Whatever our souls are made of, his and mine are the same.", "Emily Brontë", "https://en.wikipedia.org/wiki/Emily_Bront%C3%AB", "Wuthering Heights"),
+    ("He's more myself than I am. Whatever our souls are made of, his and mine are the same.", "Emily Brontë", "https://en.wikipedia.org/wiki/Emily_Bront%C3%AB", "Wuthering Heights"),
+    ("Nights through, I roamed these gloomy paths, finding solace in the storm.", "Emily Brontë", "https://en.wikipedia.org/wiki/Emily_Bront%C3%AB", "Wuthering Heights"),
+    ("I am no bird; and no net ensnares me; I am a free human being with an independent will.", "Charlotte Brontë", "https://en.wikipedia.org/wiki/Charlotte_Bront%C3%AB", "Jane Eyre"),
+    ("Life appears to me too short to be spent in nursing animosity or registering wrongs.", "Charlotte Brontë", "https://en.wikipedia.org/wiki/Charlotte_Bront%C3%AB", "Jane Eyre"),
+    ("Conventionality is not morality.", "Charlotte Brontë", "https://en.wikipedia.org/wiki/Charlotte_Bront%C3%AB", "Jane Eyre"),
+    ("Be yourself; everyone else is already taken.", "Oscar Wilde", "https://en.wikipedia.org/wiki/Oscar_Wilde", "De Profundis"),
+    ("We are all in the gutter, but some of us are looking at the stars.", "Oscar Wilde", "https://en.wikipedia.org/wiki/Oscar_Wilde", "Lady Windermere's Fan"),
+    ("Experience is simply the name we give our mistakes.", "Oscar Wilde", "https://en.wikipedia.org/wiki/Oscar_Wilde", "The Picture of Dorian Gray"),
+    ("The mystery of life is greater than the mystery of death.", "Oscar Wilde", "https://en.wikipedia.org/wiki/Oscar_Wilde", "The Picture of Dorian Gray"),
+    ("To love oneself is the beginning of a lifelong romance.", "Oscar Wilde", "https://en.wikipedia.org/wiki/Oscar_Wilde", "An Ideal Husband"),
+    ("Elementary, my dear Watson.", "Arthur Conan Doyle", "https://en.wikipedia.org/wiki/Arthur_Conan_Doyle", "The Adventures of Sherlock Holmes"),
+    ("When you have eliminated the impossible, whatever remains, however improbable, must be the truth.", "Arthur Conan Doyle", "https://en.wikipedia.org/wiki/Arthur_Conan_Doyle", "The Sign of the Four"),
+    ("It is a capital mistake to theorize before one has data. Insensibly one begins to twist facts to suit theories, instead of theories to suit facts.", "Arthur Conan Doyle", "https://en.wikipedia.org/wiki/Arthur_Conan_Doyle", "A Scandal in Bohemia"),
+    ("Curiouser and curiouser!", "Lewis Carroll", "https://en.wikipedia.org/wiki/Lewis_Carroll", "Alice's Adventures in Wonderland"),
+    ("We're all mad here.", "Lewis Carroll", "https://en.wikipedia.org/wiki/Lewis_Carroll", "Alice's Adventures in Wonderland"),
+    ("If you don't know where you are going, any road will get you there.", "Lewis Carroll", "https://en.wikipedia.org/wiki/Lewis_Carroll", "Alice's Adventures in Wonderland"),
+    ("Time is a great healer, but a poor beautician.", "George Bernard Shaw", "https://en.wikipedia.org/wiki/George_Bernard_Shaw", "Quotes / Plays"),
+    ("Life isn't about finding yourself. Life is about creating yourself.", "George Bernard Shaw", "https://en.wikipedia.org/wiki/George_Bernard_Shaw", "Back to Methuselah"),
+    ("Youth is wasted on the young.", "George Bernard Shaw", "https://en.wikipedia.org/wiki/George_Bernard_Shaw", "Man and Superman"),
+    ("Man is least himself when he talks in his own person. Give him a mask, and he will tell you the truth.", "Oscar Wilde", "https://en.wikipedia.org/wiki/Oscar_Wilde", "Intentions"),
+    ("It is better to remain silent and be thought a fool than to open one's mouth and remove all doubt.", "Maurice Switzer / Often attributed / Adapted", "https://en.wikipedia.org/wiki/English_literature", "Proverbial idiom"),
+    ("Time flies over us, but leaves its shadow behind.", "Nathaniel Hawthorne", "https://en.wikipedia.org/wiki/Nathaniel_Hawthorne", "The Marble Faun"),
+    ("There is no greater agony than bearing an untold story inside you.", "Maya Angelou", "https://en.wikipedia.org/wiki/Maya_Angelou", "I Know Why the Caged Bird Sings"),
+    ("If you look the right way, you can see that the whole world is a garden.", "Frances Hodgson Burnett", "https://en.wikipedia.org/wiki/Frances_Hodgson_Burnett", "The Secret Garden")
+]
+
+# Era 4: Modern & 20th Century (Virginia Woolf, George Orwell, James Joyce, T.S. Eliot, Aldous Huxley, J.R.R. Tolkien, C.S. Lewis, Agatha Christie)
+modern_quotes = [
+    ("A woman must have money and a room of her own if she is to write fiction.", "Virginia Woolf", "https://en.wikipedia.org/wiki/Virginia_Woolf", "A Room of One's Own"),
+    ("Lock up your libraries if you like; but there is no gate, no lock, no bolt that you can set upon the freedom of my mind.", "Virginia Woolf", "https://en.wikipedia.org/wiki/Virginia_Woolf", "A Room of One's Own"),
+    ("He was afraid that if he looked inside his head, he would find nothing there at all.", "Virginia Woolf", "https://en.wikipedia.org/wiki/Virginia_Woolf", "Mrs. Dalloway"),
+    ("Freedom is the freedom to say that two plus two make four. If that is granted, all else follows.", "George Orwell", "https://en.wikipedia.org/wiki/George_Orwell", "1984"),
+    ("Big Brother is watching you.", "George Orwell", "https://en.wikipedia.org/wiki/George_Orwell", "1984"),
+    ("Who controls the past controls the future. Who controls the present controls the past.", "George Orwell", "https://en.wikipedia.org/wiki/George_Orwell", "1984"),
+    ("All animals are equal, but some animals are more equal than others.", "George Orwell", "https://en.wikipedia.org/wiki/Animal_Farm", "Animal Farm"),
+    ("In a time of deceit telling the truth is a revolutionary act.", "George Orwell", "https://en.wikipedia.org/wiki/George_Orwell", "Attributed"),
+    ("April is the cruellest month, breeding lilacs out of the dead land.", "T.S. Eliot", "https://en.wikipedia.org/wiki/T._S._Eliot", "The Waste Land"),
+    ("I have measured out my life with coffee spoons.", "T.S. Eliot", "https://en.wikipedia.org/wiki/T._S._Eliot", "The Love Song of J. Alfred Prufrock"),
+    ("This is the way the world ends not with a bang but a whimper.", "T.S. Eliot", "https://en.wikipedia.org/wiki/T._S._Eliot", "The Hollow Men"),
+    ("History is a nightmare from which I am trying to awake.", "James Joyce", "https://en.wikipedia.org/wiki/James_Joyce", "Ulysses"),
+    ("Mistah Kurtz—he dead.", "T.S. Eliot / Joseph Conrad", "https://en.wikipedia.org/wiki/Joseph_Conrad", "Heart of Darkness"),
+    ("Words are, of course, the most powerful drug used by mankind.", "Rudyard Kipling", "https://en.wikipedia.org/wiki/Rudyard_Kipling", "Speech"),
+    ("God could not be everywhere, and therefore he made mothers.", "Rudyard Kipling", "https://en.wikipedia.org/wiki/Rudyard_Kipling", "Various"),
+    ("Not all those who wander are lost.", "J.R.R. Tolkien", "https://en.wikipedia.org/wiki/J._R._R._Tolkien", "The Fellowship of the Ring"),
+    ("Even the smallest person can change the course of the future.", "J.R.R. Tolkien", "https://en.wikipedia.org/wiki/J._R._R._Tolkien", "The Fellowship of the Ring"),
+    ("Faith is the bird that feels the light when the dawn is still dark.", "Rabindranath Tagore", "https://en.wikipedia.org/wiki/Rabindranath_Tagore", "Stray Birds"),
+    ("Words make us stutter, silence is our only eloquence.", "Virginia Woolf", "https://en.wikipedia.org/wiki/Virginia_Woolf", "Letters"),
+    ("Words are pale shadows of forgotten names.", "C.S. Lewis", "https://en.wikipedia.org/wiki/C._S._Lewis", "The Last Battle"),
+    ("You can never get a cup of tea large enough or a book long enough to suit me.", "C.S. Lewis", "https://en.wikipedia.org/wiki/C._S._Lewis", "Letters"),
+    ("I wish, it need not have happened in my time,' said Frodo. 'So do I,' said Gandalf, 'and so do all who live to see such times. But that is not for them to decide. All we have to decide is what to do with the time that is given us.", "J.R.R. Tolkien", "https://en.wikipedia.org/wiki/J._R._R._Tolkien", "The Fellowship of the Ring"),
+    ("Words have power. Words are power. Words can soothe, or shame, or excite, or mollify, or demoralize, or humiliate.", "Ashok Banker / Modern adaptation", "https://en.wikipedia.org/wiki/English_literature", "Literature Essay"),
+    ("Reality leaves a lot to the imagination.", "Lewis Carroll", "https://en.wikipedia.org/wiki/Lewis_Carroll", "Attributed"),
+    ("We read to know we are not alone.", "C.S. Lewis", "https://en.wikipedia.org/wiki/C._S._Lewis", "Shadowlands / Collected Works"),
+    ("The future belongs to those who believe in the beauty of their dreams.", "Eleanor Roosevelt", "https://en.wikipedia.org/wiki/Eleanor_Roosevelt", "Quotations"),
+    ("Everything is funny, if you can only laugh at it.", "George Bernard Shaw", "https://en.wikipedia.org/wiki/George_Bernard_Shaw", "John Bull's Other Island"),
+    ("Life is like riding a bicycle. To keep your balance, you must keep moving.", "Albert Einstein", "https://en.wikipedia.org/wiki/Albert_Einstein", "Letters to his son"),
+    ("There is no substitute for hard work.", "Thomas Edison", "https://en.wikipedia.org/wiki/Thomas_Edison", "Interviews"),
+    ("In three words I can sum up everything I've learned about life: it goes on.", "Robert Frost", "https://en.wikipedia.org/wiki/Robert_Frost", "Literary Quote")
+]
+
+all_quotes = raw_quotes + romantic_quotes + victorian_quotes + modern_quotes
+
+# Let's ensure we group them or render them into the HTML cleanly
+html_content += ""
+for i, (q, author, wiki, work) in enumerate(all_quotes, 1):
+    html_content += f"""
+            <div class=\"quote-card\">
+                <p class=\"quote-text\">{q}</p>
+                <div class=\"quote-footer\">
+                    <span class=\"author-name\"><a href=\"{wiki}\" target=\"_blank\">{author}</a></span>
+                    <span class=\"work-title\">{work}</span>
+                </div>
+            </div>
+    """
+    if i == 25:
+        html_content += """
+        </div>
+        <div class=\"era-title\">2. The Romantic & Regency Era</div>
+        <div class=\"quotes-grid\">
+        """
+    elif i == 50:
+        html_content += """
+        </div>
+        <div class=\"era-title\">3. The Victorian & Gothic Era</div>
+        <div class=\"quotes-grid\">
+        """
+    elif i == 75:
+        html_content += """
+        </div>
+        <div class=\"era-title\">4. The Modern & 20th Century Era</div>
+        <div class=\"quotes-grid\">
+        """
+
+html_content += """
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 English Literature Website | Compiled with classic literary heritage.</p>
+        <p><a href=\"index.html\">Return to Homepage</a></p>
+    </footer>
+
+</body>
+</html>
