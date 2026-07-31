@@ -166,191 +166,831 @@
         <!-- Section 1: Renaissance & Elizabethan Era -->
         <div class="era-title">1. The Renaissance & Elizabethan Era</div>
         <div class="quotes-grid">
-"""
 
-# Let's generate a list of 100 well-structured quotes with actual authors, wiki links, and works.
-raw_quotes = [
-    # Shakespeare
-    ("To be, or not to be, that is the question.", "William Shakespeare", "https://en.wikipedia.org/wiki/William_Shakespeare", "Hamlet"),
-    ("All the world's a stage, and all the men and women merely players.", "William Shakespeare", "https://en.wikipedia.org/wiki/William_Shakespeare", "As You Like It"),
-    ("What's in a name? That which we call a rose by any other name would smell as sweet.", "William Shakespeare", "https://en.wikipedia.org/wiki/William_Shakespeare", "Romeo and Juliet"),
-    ("Now is the winter of our discontent made glorious summer by this sun of York.", "William Shakespeare", "https://en.wikipedia.org/wiki/William_Shakespeare", "Richard III"),
-    ("Brave new world, that has such people in't.", "William Shakespeare", "https://en.wikipedia.org/wiki/William_Shakespeare", "The Tempest"),
-    ("The course of true love never did run smooth.", "William Shakespeare", "https://en.wikipedia.org/wiki/William_Shakespeare", "A Midsummer Night's Dream"),
-    ("Double, double toil and trouble; Fire burn, and cauldron bubble.", "William Shakespeare", "https://en.wikipedia.org/wiki/William_Shakespeare", "Macbeth"),
-    ("If music be the food of love, play on.", "William Shakespeare", "https://en.wikipedia.org/wiki/William_Shakespeare", "Twelfth Night"),
-    ("Lord, what fools these mortals be!", "William Shakespeare", "https://en.wikipedia.org/wiki/William_Shakespeare", "A Midsummer Night's Dream"),
-    ("Cowards die many times before their deaths; the valiant never taste of death but once.", "William Shakespeare", "https://en.wikipedia.org/wiki/William_Shakespeare", "Julius Caesar"),
-    ("There is nothing either good or bad, but thinking makes it so.", "William Shakespeare", "https://en.wikipedia.org/wiki/William_Shakespeare", "Hamlet"),
-    ("We are such stuff as dreams are made on, and our little life is rounded with a sleep.", "William Shakespeare", "https://en.wikipedia.org/wiki/William_Shakespeare", "The Tempest"),
-    ("Sweets to the sweet: farewell!", "William Shakespeare", "https://en.wikipedia.org/wiki/William_Shakespeare", "Hamlet"),
-    ("Though she be but little, she is fierce.", "William Shakespeare", "https://en.wikipedia.org/wiki/William_Shakespeare", "A Midsummer Night's Dream"),
-    ("Men at some time are masters of their fates: The fault, dear Brutus, is not in our stars, but in ourselves.", "William Shakespeare", "https://en.wikipedia.org/wiki/William_Shakespeare", "Julius Caesar"),
-    ("Parting is such sweet sorrow.", "William Shakespeare", "https://en.wikipedia.org/wiki/William_Shakespeare", "Romeo and Juliet"),
-    ("To thine own self be true, and it must follow, as the night the day, thou canst not then be false to any man.", "William Shakespeare", "https://en.wikipedia.org/wiki/William_Shakespeare", "Hamlet"),
-    ("Suspicion always haunts the guilty mind.", "William Shakespeare", "https://en.wikipedia.org/wiki/William_Shakespeare", "Henry VI, Part 3"),
-    ("Brevity is the soul of wit.", "William Shakespeare", "https://en.wikipedia.org/wiki/William_Shakespeare", "Hamlet"),
-    ("A horse! a horse! my kingdom for a horse!", "William Shakespeare", "https://en.wikipedia.org/wiki/William_Shakespeare", "Richard III"),
-
-    # Christopher Marlowe & John Donne
-    ("Who ever loved that loved not at first sight?", "Christopher Marlowe", "https://en.wikipedia.org/wiki/Christopher_Marlowe", "Hero and Leander"),
-    ("Was this the face that launch'd a thousand ships / And burnt the topless towers of Ilium?", "Christopher Marlowe", "https://en.wikipedia.org/wiki/Christopher_Marlowe", "Doctor Faustus"),
-    ("No man is an island, entire of itself; every man is a piece of the continent, a part of the main.", "John Donne", "https://en.wikipedia.org/wiki/John_Donne", "Devotions upon Emergent Occasions"),
-    ("Death, be not proud, though some have called thee / Mighty and dreadful, for, thou art not so.", "John Donne", "https://en.wikipedia.org/wiki/John_Donne", "Holy Sonnet X"),
-    ("For God's sake hold your tongue, and let me love.", "John Donne", "https://en.wikipedia.org/wiki/John_Donne", "The Canonization"),
-
-    # John Milton & 17th Century
-    ("Better to reign in hell, than serve in heaven.", "John Milton", "https://en.wikipedia.org/wiki/John_Milton", "Paradise Lost"),
-    ("The mind is its own place, and in itself can make a heaven of hell, a hell of heaven.", "John Milton", "https://en.wikipedia.org/wiki/John_Milton", "Paradise Lost"),
-    ("Awake, arise, or be for ever fall'n!", "John Milton", "https://en.wikipedia.org/wiki/John_Milton", "Paradise Lost"),
-    ("They also serve who only stand and wait.", "John Milton", "https://en.wikipedia.org/wiki/John_Milton", "When I Consider How My Light is Spent"),
-    ("Fame is the spur that the clear spirit doth raise / (That last infirmity of noble mind) / To scorn delights, and live laborious days.", "John Milton", "https://en.wikipedia.org/wiki/John_Milton", "Lycidas"),
-    ("The greatest enemy of knowledge is not ignorance, it is the illusion of knowledge.", "Stephen Hawking", "https://en.wikipedia.org/wiki/Stephen_Hawking", "A Brief History of Time"), # Wait, keep it strictly classic lit or include broadly? Let's stick to literary figures. Let's add Andrew Marvell, Alexander Pope, etc.
-    ("Had we but world enough, and time, this coyness, lady, were no crime.", "Andrew Marvell", "https://en.wikipedia.org/wiki/Andrew_Marvell", "To His Coy Mistress"),
-    ("To err is human, to forgive divine.", "Alexander Pope", "https://en.wikipedia.org/wiki/Alexander_Pope", "An Essay on Criticism"),
-    ("A little learning is a dang'rous thing; drink deep, or taste not the Pierian spring.", "Alexander Pope", "https://en.wikipedia.org/wiki/Alexander_Pope", "An Essay on Criticism"),
-    ("Fools rush in where angels fear to tread.", "Alexander Pope", "https://en.wikipedia.org/wiki/Alexander_Pope", "An Essay on Criticism"),
-    ("Hope springs eternal in the human breast: man never is, but always to be blest.", "Alexander Pope", "https://en.wikipedia.org/wiki/Alexander_Pope", "An Essay on Man"),
-    ("An honest man's the noblest work of God.", "Alexander Pope", "https://en.wikipedia.org/wiki/Alexander_Pope", "An Essay on Man")
-]
-
-# Let's expand list systematically to reach ~100 quotes across eras:
-# Era 2: Romantic Era (Wordsworth, Coleridge, Keats, Shelley, Byron, Blake, Mary Shelley, Jane Austen)
-romantic_quotes = [
-    ("Water, water, every where, nor any drop to drink.", "Samuel Taylor Coleridge", "https://en.wikipedia.org/wiki/Samuel_Taylor_Coleridge", "The Rime of the Ancient Mariner"),
-    ("He prayeth best, who loveth best all things both great and small.", "Samuel Taylor Coleridge", "https://en.wikipedia.org/wiki/Samuel_Taylor_Coleridge", "The Rime of the Ancient Mariner"),
-    ("In Xanadu did Kubla Khan a stately pleasure-dome decree.", "Samuel Taylor Coleridge", "https://en.wikipedia.org/wiki/Samuel_Taylor_Coleridge", "Kubla Khan"),
-    ("The child is father of the man.", "William Wordsworth", "https://en.wikipedia.org/wiki/William_Wordsworth", "My Heart Leaps Up"),
-    ("I wandered lonely as a cloud that floats on high o'er vales and hills.", "William Wordsworth", "https://en.wikipedia.org/wiki/William_Wordsworth", "I Wandered Lonely as a Cloud"),
-    ("To me the meanest flower that blows can give thoughts that do often lie too deep for tears.", "William Wordsworth", "https://en.wikipedia.org/wiki/William_Wordsworth", "Ode: Intimations of Immortality"),
-    ("Bliss was it in that dawn to be alive, but to be young was very heaven!", "William Wordsworth", "https://en.wikipedia.org/wiki/William_Wordsworth", "The Prelude"),
-    ("Beauty is truth, truth beauty,—that is all ye know on earth, and all ye need to know.", "John Keats", "https://en.wikipedia.org/wiki/John_Keats", "Ode on a Grecian Urn"),
-    ("A thing of beauty is a joy for ever.", "John Keats", "https://en.wikipedia.org/wiki/John_Keats", "Endymion"),
-    ("Season of mists and mellow fruitfulness...", "John Keats", "https://en.wikipedia.org/wiki/John_Keats", "To Autumn"),
-    ("If Winter comes, can Spring be far behind?", "Percy Bysshe Shelley", "https://en.wikipedia.org/wiki/Percy_Bysshe_Shelley", "Ode to the West Wind"),
-    ("My name is Ozymandias, King of Kings: Look on my works, ye Mighty, and despair!", "Percy Bysshe Shelley", "https://en.wikipedia.org/wiki/Percy_Bysshe_Shelley", "Ozymandias"),
-    ("Poetry is the lava of the imagination whose eruption prevents earthquakes.", "Percy Bysshe Shelley", "https://en.wikipedia.org/wiki/Percy_Bysshe_Shelley", "A Defence of Poetry"),
-    ("She walks in beauty, like the night of cloudless climes and starry skies.", "Lord Byron", "https://en.wikipedia.org/wiki/Lord_Byron", "She Walks in Beauty"),
-    ("The great art of life is sensation, to feel that we exist, even in pain.", "Lord Byron", "https://en.wikipedia.org/wiki/Lord_Byron", "Letter to Annabella Milbanke"),
-    ("To live is like to love—all reason is against it, and all healthy instinct for it.", "Samuel Butler", "https://en.wikipedia.org/wiki/Samuel_Butler_(novelist)", "The Way of All Flesh"),
-    ("To see a World in a Grain of Sand / And a Heaven in a Wild Flower.", "William Blake", "https://en.wikipedia.org/wiki/William_Blake", "Auguries of Innocence"),
-    ("Tyger Tyger, burning bright, in the forests of the night.", "William Blake", "https://en.wikipedia.org/wiki/William_Blake", "The Tyger"),
-    ("It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife.", "Jane Austen", "https://en.wikipedia.org/wiki/Jane_Austen", "Pride and Prejudice"),
-    ("Vanity and pride are different things, though the words are often used synonymously. Pride relates more to our opinion of ourselves, vanity to what we would have others think of us.", "Jane Austen", "https://en.wikipedia.org/wiki/Jane_Austen", "Pride and Prejudice"),
-    ("There is no charm equal to tenderness of heart.", "Jane Austen", "https://en.wikipedia.org/wiki/Jane_Austen", "Emma"),
-    ("Ignorance is certainly a most desirable part of knowledge.", "Jane Austen", "https://en.wikipedia.org/wiki/Jane_Austen", "Mansfield Park"),
-    ("Beware; for I am fearless, and therefore powerful.", "Mary Shelley", "https://en.wikipedia.org/wiki/Mary_Shelley", "Frankenstein"),
-    ("Nothing is more painful to the human mind than, after the feelings have been worked up by a quick succession of events, the dead calm of inaction and certainty which follows and deprives the soul both of hope and fear.", "Mary Shelley", "https://en.wikipedia.org/wiki/Mary_Shelley", "Frankenstein")
-]
-
-# Era 3: Victorian & Gothic Era (Dickens, Brontë sisters, Wilde, Doyle, Carroll, Hardy, Stevenson)
-victorian_quotes = [
-    ("It was the best of times, it was the worst of times...", "Charles Dickens", "https://en.wikipedia.org/wiki/Charles_Dickens", "A Tale of Two Cities"),
-    ("Please, sir, I want some more.", "Charles Dickens", "https://en.wikipedia.org/wiki/Charles_Dickens", "Oliver Twist"),
-    ("Annual income twenty pounds, annual expenditure nineteen six, result happiness. Annual income twenty pounds, annual expenditure twenty pound ought and six, result misery.", "Charles Dickens", "https://en.wikipedia.org/wiki/Charles_Dickens", "David Copperfield"),
-    ("Reflections may be just as admirable as what people call personal experience.", "Charles Dickens", "https://en.wikipedia.org/wiki/Charles_Dickens", "Hard Times"),
-    ("Have heart that never hardens, and a temper that never tires, and a touch that never hurts.", "Charles Dickens", "https://en.wikipedia.org/wiki/Charles_Dickens", "David Copperfield"),
-    ("Whatever our souls are made of, his and mine are the same.", "Emily Brontë", "https://en.wikipedia.org/wiki/Emily_Bront%C3%AB", "Wuthering Heights"),
-    ("He's more myself than I am. Whatever our souls are made of, his and mine are the same.", "Emily Brontë", "https://en.wikipedia.org/wiki/Emily_Bront%C3%AB", "Wuthering Heights"),
-    ("Nights through, I roamed these gloomy paths, finding solace in the storm.", "Emily Brontë", "https://en.wikipedia.org/wiki/Emily_Bront%C3%AB", "Wuthering Heights"),
-    ("I am no bird; and no net ensnares me; I am a free human being with an independent will.", "Charlotte Brontë", "https://en.wikipedia.org/wiki/Charlotte_Bront%C3%AB", "Jane Eyre"),
-    ("Life appears to me too short to be spent in nursing animosity or registering wrongs.", "Charlotte Brontë", "https://en.wikipedia.org/wiki/Charlotte_Bront%C3%AB", "Jane Eyre"),
-    ("Conventionality is not morality.", "Charlotte Brontë", "https://en.wikipedia.org/wiki/Charlotte_Bront%C3%AB", "Jane Eyre"),
-    ("Be yourself; everyone else is already taken.", "Oscar Wilde", "https://en.wikipedia.org/wiki/Oscar_Wilde", "De Profundis"),
-    ("We are all in the gutter, but some of us are looking at the stars.", "Oscar Wilde", "https://en.wikipedia.org/wiki/Oscar_Wilde", "Lady Windermere's Fan"),
-    ("Experience is simply the name we give our mistakes.", "Oscar Wilde", "https://en.wikipedia.org/wiki/Oscar_Wilde", "The Picture of Dorian Gray"),
-    ("The mystery of life is greater than the mystery of death.", "Oscar Wilde", "https://en.wikipedia.org/wiki/Oscar_Wilde", "The Picture of Dorian Gray"),
-    ("To love oneself is the beginning of a lifelong romance.", "Oscar Wilde", "https://en.wikipedia.org/wiki/Oscar_Wilde", "An Ideal Husband"),
-    ("Elementary, my dear Watson.", "Arthur Conan Doyle", "https://en.wikipedia.org/wiki/Arthur_Conan_Doyle", "The Adventures of Sherlock Holmes"),
-    ("When you have eliminated the impossible, whatever remains, however improbable, must be the truth.", "Arthur Conan Doyle", "https://en.wikipedia.org/wiki/Arthur_Conan_Doyle", "The Sign of the Four"),
-    ("It is a capital mistake to theorize before one has data. Insensibly one begins to twist facts to suit theories, instead of theories to suit facts.", "Arthur Conan Doyle", "https://en.wikipedia.org/wiki/Arthur_Conan_Doyle", "A Scandal in Bohemia"),
-    ("Curiouser and curiouser!", "Lewis Carroll", "https://en.wikipedia.org/wiki/Lewis_Carroll", "Alice's Adventures in Wonderland"),
-    ("We're all mad here.", "Lewis Carroll", "https://en.wikipedia.org/wiki/Lewis_Carroll", "Alice's Adventures in Wonderland"),
-    ("If you don't know where you are going, any road will get you there.", "Lewis Carroll", "https://en.wikipedia.org/wiki/Lewis_Carroll", "Alice's Adventures in Wonderland"),
-    ("Time is a great healer, but a poor beautician.", "George Bernard Shaw", "https://en.wikipedia.org/wiki/George_Bernard_Shaw", "Quotes / Plays"),
-    ("Life isn't about finding yourself. Life is about creating yourself.", "George Bernard Shaw", "https://en.wikipedia.org/wiki/George_Bernard_Shaw", "Back to Methuselah"),
-    ("Youth is wasted on the young.", "George Bernard Shaw", "https://en.wikipedia.org/wiki/George_Bernard_Shaw", "Man and Superman"),
-    ("Man is least himself when he talks in his own person. Give him a mask, and he will tell you the truth.", "Oscar Wilde", "https://en.wikipedia.org/wiki/Oscar_Wilde", "Intentions"),
-    ("It is better to remain silent and be thought a fool than to open one's mouth and remove all doubt.", "Maurice Switzer / Often attributed / Adapted", "https://en.wikipedia.org/wiki/English_literature", "Proverbial idiom"),
-    ("Time flies over us, but leaves its shadow behind.", "Nathaniel Hawthorne", "https://en.wikipedia.org/wiki/Nathaniel_Hawthorne", "The Marble Faun"),
-    ("There is no greater agony than bearing an untold story inside you.", "Maya Angelou", "https://en.wikipedia.org/wiki/Maya_Angelou", "I Know Why the Caged Bird Sings"),
-    ("If you look the right way, you can see that the whole world is a garden.", "Frances Hodgson Burnett", "https://en.wikipedia.org/wiki/Frances_Hodgson_Burnett", "The Secret Garden")
-]
-
-# Era 4: Modern & 20th Century (Virginia Woolf, George Orwell, James Joyce, T.S. Eliot, Aldous Huxley, J.R.R. Tolkien, C.S. Lewis, Agatha Christie)
-modern_quotes = [
-    ("A woman must have money and a room of her own if she is to write fiction.", "Virginia Woolf", "https://en.wikipedia.org/wiki/Virginia_Woolf", "A Room of One's Own"),
-    ("Lock up your libraries if you like; but there is no gate, no lock, no bolt that you can set upon the freedom of my mind.", "Virginia Woolf", "https://en.wikipedia.org/wiki/Virginia_Woolf", "A Room of One's Own"),
-    ("He was afraid that if he looked inside his head, he would find nothing there at all.", "Virginia Woolf", "https://en.wikipedia.org/wiki/Virginia_Woolf", "Mrs. Dalloway"),
-    ("Freedom is the freedom to say that two plus two make four. If that is granted, all else follows.", "George Orwell", "https://en.wikipedia.org/wiki/George_Orwell", "1984"),
-    ("Big Brother is watching you.", "George Orwell", "https://en.wikipedia.org/wiki/George_Orwell", "1984"),
-    ("Who controls the past controls the future. Who controls the present controls the past.", "George Orwell", "https://en.wikipedia.org/wiki/George_Orwell", "1984"),
-    ("All animals are equal, but some animals are more equal than others.", "George Orwell", "https://en.wikipedia.org/wiki/Animal_Farm", "Animal Farm"),
-    ("In a time of deceit telling the truth is a revolutionary act.", "George Orwell", "https://en.wikipedia.org/wiki/George_Orwell", "Attributed"),
-    ("April is the cruellest month, breeding lilacs out of the dead land.", "T.S. Eliot", "https://en.wikipedia.org/wiki/T._S._Eliot", "The Waste Land"),
-    ("I have measured out my life with coffee spoons.", "T.S. Eliot", "https://en.wikipedia.org/wiki/T._S._Eliot", "The Love Song of J. Alfred Prufrock"),
-    ("This is the way the world ends not with a bang but a whimper.", "T.S. Eliot", "https://en.wikipedia.org/wiki/T._S._Eliot", "The Hollow Men"),
-    ("History is a nightmare from which I am trying to awake.", "James Joyce", "https://en.wikipedia.org/wiki/James_Joyce", "Ulysses"),
-    ("Mistah Kurtz—he dead.", "T.S. Eliot / Joseph Conrad", "https://en.wikipedia.org/wiki/Joseph_Conrad", "Heart of Darkness"),
-    ("Words are, of course, the most powerful drug used by mankind.", "Rudyard Kipling", "https://en.wikipedia.org/wiki/Rudyard_Kipling", "Speech"),
-    ("God could not be everywhere, and therefore he made mothers.", "Rudyard Kipling", "https://en.wikipedia.org/wiki/Rudyard_Kipling", "Various"),
-    ("Not all those who wander are lost.", "J.R.R. Tolkien", "https://en.wikipedia.org/wiki/J._R._R._Tolkien", "The Fellowship of the Ring"),
-    ("Even the smallest person can change the course of the future.", "J.R.R. Tolkien", "https://en.wikipedia.org/wiki/J._R._R._Tolkien", "The Fellowship of the Ring"),
-    ("Faith is the bird that feels the light when the dawn is still dark.", "Rabindranath Tagore", "https://en.wikipedia.org/wiki/Rabindranath_Tagore", "Stray Birds"),
-    ("Words make us stutter, silence is our only eloquence.", "Virginia Woolf", "https://en.wikipedia.org/wiki/Virginia_Woolf", "Letters"),
-    ("Words are pale shadows of forgotten names.", "C.S. Lewis", "https://en.wikipedia.org/wiki/C._S._Lewis", "The Last Battle"),
-    ("You can never get a cup of tea large enough or a book long enough to suit me.", "C.S. Lewis", "https://en.wikipedia.org/wiki/C._S._Lewis", "Letters"),
-    ("I wish, it need not have happened in my time,' said Frodo. 'So do I,' said Gandalf, 'and so do all who live to see such times. But that is not for them to decide. All we have to decide is what to do with the time that is given us.", "J.R.R. Tolkien", "https://en.wikipedia.org/wiki/J._R._R._Tolkien", "The Fellowship of the Ring"),
-    ("Words have power. Words are power. Words can soothe, or shame, or excite, or mollify, or demoralize, or humiliate.", "Ashok Banker / Modern adaptation", "https://en.wikipedia.org/wiki/English_literature", "Literature Essay"),
-    ("Reality leaves a lot to the imagination.", "Lewis Carroll", "https://en.wikipedia.org/wiki/Lewis_Carroll", "Attributed"),
-    ("We read to know we are not alone.", "C.S. Lewis", "https://en.wikipedia.org/wiki/C._S._Lewis", "Shadowlands / Collected Works"),
-    ("The future belongs to those who believe in the beauty of their dreams.", "Eleanor Roosevelt", "https://en.wikipedia.org/wiki/Eleanor_Roosevelt", "Quotations"),
-    ("Everything is funny, if you can only laugh at it.", "George Bernard Shaw", "https://en.wikipedia.org/wiki/George_Bernard_Shaw", "John Bull's Other Island"),
-    ("Life is like riding a bicycle. To keep your balance, you must keep moving.", "Albert Einstein", "https://en.wikipedia.org/wiki/Albert_Einstein", "Letters to his son"),
-    ("There is no substitute for hard work.", "Thomas Edison", "https://en.wikipedia.org/wiki/Thomas_Edison", "Interviews"),
-    ("In three words I can sum up everything I've learned about life: it goes on.", "Robert Frost", "https://en.wikipedia.org/wiki/Robert_Frost", "Literary Quote")
-]
-
-all_quotes = raw_quotes + romantic_quotes + victorian_quotes + modern_quotes
-
-# Let's ensure we group them or render them into the HTML cleanly
-html_content += ""
-for i, (q, author, wiki, work) in enumerate(all_quotes, 1):
-    html_content += f"""
-            <div class=\"quote-card\">
-                <p class=\"quote-text\">{q}</p>
-                <div class=\"quote-footer\">
-                    <span class=\"author-name\"><a href=\"{wiki}\" target=\"_blank\">{author}</a></span>
-                    <span class=\"work-title\">{work}</span>
+            <div class="quote-card">
+                <p class="quote-text">To be, or not to be, that is the question.</p>
+                <div class="quote-footer">
+                    <span class="author-name"><a href="https://en.wikipedia.org/wiki/William_Shakespeare" target="_blank">William Shakespeare</a></span>
+                    <span class="work-title">Hamlet</span>
                 </div>
             </div>
-    """
-    if i == 25:
-        html_content += """
-        </div>
-        <div class=\"era-title\">2. The Romantic & Regency Era</div>
-        <div class=\"quotes-grid\">
-        """
-    elif i == 50:
-        html_content += """
-        </div>
-        <div class=\"era-title\">3. The Victorian & Gothic Era</div>
-        <div class=\"quotes-grid\">
-        """
-    elif i == 75:
-        html_content += """
-        </div>
-        <div class=\"era-title\">4. The Modern & 20th Century Era</div>
-        <div class=\"quotes-grid\">
-        """
 
-html_content += """
+            <div class="quote-card">
+                <p class="quote-text">All the world's a stage, and all the men and women merely players.</p>
+                <div class="quote-footer">
+                    <span class="author-name"><a href="https://en.wikipedia.org/wiki/William_Shakespeare" target="_blank">William Shakespeare</a></span>
+                    <span class="work-title">As You Like It</span>
+                </div>
+            </div>
+
+            <div class="quote-card">
+                <p class="quote-text">What's in a name? That which we call a rose by any other name would smell as sweet.</p>
+                <div class="quote-footer">
+                    <span class="author-name"><a href="https://en.wikipedia.org/wiki/William_Shakespeare" target="_blank">William Shakespeare</a></span>
+                    <span class="work-title">Romeo and Juliet</span>
+                </div>
+            </div>
+
+            <div class="quote-card">
+                <p class="quote-text">Now is the winter of our discontent made glorious summer by this sun of York.</p>
+                <div class="quote-footer">
+                    <span class="author-name"><a href="https://en.wikipedia.org/wiki/William_Shakespeare" target="_blank">William Shakespeare</a></span>
+                    <span class="work-title">Richard III</span>
+                </div>
+            </div>
+
+            <div class="quote-card">
+                <p class="quote-text">Brave new world, that has such people in't.</p>
+                <div class="quote-footer">
+                    <span class="author-name"><a href="https://en.wikipedia.org/wiki/William_Shakespeare" target="_blank">William Shakespeare</a></span>
+                    <span class="work-title">The Tempest</span>
+                </div>
+            </div>
+
+            <div class="quote-card">
+                <p class="quote-text">The course of true love never did run smooth.</p>
+                <div class="quote-footer">
+                    <span class="author-name"><a href="https://en.wikipedia.org/wiki/William_Shakespeare" target="_blank">William Shakespeare</a></span>
+                    <span class="work-title">A Midsummer Night's Dream</span>
+                </div>
+            </div>
+
+            <div class="quote-card">
+                <p class="quote-text">Double, double toil and trouble; Fire burn, and cauldron bubble.</p>
+                <div class="quote-footer">
+                    <span class="author-name"><a href="https://en.wikipedia.org/wiki/William_Shakespeare" target="_blank">William Shakespeare</a></span>
+                    <span class="work-title">Macbeth</span>
+                </div>
+            </div>
+
+            <div class="quote-card">
+                <p class="quote-text">If music be the food of love, play on.</p>
+                <div class="quote-footer">
+                    <span class="author-name"><a href="https://en.wikipedia.org/wiki/William_Shakespeare" target="_blank">William Shakespeare</a></span>
+                    <span class="work-title">Twelfth Night</span>
+                </div>
+            </div>
+
+            <div class="quote-card">
+                <p class="quote-text">Lord, what fools these mortals be!</p>
+                <div class="quote-footer">
+                    <span class="author-name"><a href="https://en.wikipedia.org/wiki/William_Shakespeare" target="_blank">William Shakespeare</a></span>
+                    <span class="work-title">A Midsummer Night's Dream</span>
+                </div>
+            </div>
+
+            <div class="quote-card">
+                <p class="quote-text">Cowards die many times before their deaths; the valiant never taste of death but once.</p>
+                <div class="quote-footer">
+                    <span class="author-name"><a href="https://en.wikipedia.org/wiki/William_Shakespeare" target="_blank">William Shakespeare</a></span>
+                    <span class="work-title">Julius Caesar</span>
+                </div>
+            </div>
+
+            <div class="quote-card">
+                <p class="quote-text">There is nothing either good or bad, but thinking makes it so.</p>
+                <div class="quote-footer">
+                    <span class="author-name"><a href="https://en.wikipedia.org/wiki/William_Shakespeare" target="_blank">William Shakespeare</a></span>
+                    <span class="work-title">Hamlet</span>
+                </div>
+            </div>
+
+            <div class="quote-card">
+                <p class="quote-text">We are such stuff as dreams are made on, and our little life is rounded with a sleep.</p>
+                <div class="quote-footer">
+                    <span class="author-name"><a href="https://en.wikipedia.org/wiki/William_Shakespeare" target="_blank">William Shakespeare</a></span>
+                    <span class="work-title">The Tempest</span>
+                </div>
+            </div>
+
+            <div class="quote-card">
+                <p class="quote-text">Sweets to the sweet: farewell!</p>
+                <div class="quote-footer">
+                    <span class="author-name"><a href="https://en.wikipedia.org/wiki/William_Shakespeare" target="_blank">William Shakespeare</a></span>
+                    <span class="work-title">Hamlet</span>
+                </div>
+            </div>
+
+            <div class="quote-card">
+                <p class="quote-text">Though she be but little, she is fierce.</p>
+                <div class="quote-footer">
+                    <span class="author-name"><a href="https://en.wikipedia.org/wiki/William_Shakespeare" target="_blank">William Shakespeare</a></span>
+                    <span class="work-title">A Midsummer Night's Dream</span>
+                </div>
+            </div>
+
+            <div class="quote-card">
+                <p class="quote-text">Men at some time are masters of their fates: The fault, dear Brutus, is not in our stars, but in ourselves.</p>
+                <div class="quote-footer">
+                    <span class="author-name"><a href="https://en.wikipedia.org/wiki/William_Shakespeare" target="_blank">William Shakespeare</a></span>
+                    <span class="work-title">Julius Caesar</span>
+                </div>
+            </div>
+
+            <div class="quote-card">
+                <p class="quote-text">Parting is such sweet sorrow.</p>
+                <div class="quote-footer">
+                    <span class="author-name"><a href="https://en.wikipedia.org/wiki/William_Shakespeare" target="_blank">William Shakespeare</a></span>
+                    <span class="work-title">Romeo and Juliet</span>
+                </div>
+            </div>
+
+            <div class="quote-card">
+                <p class="quote-text">To thine own self be true, and it must follow, as the night the day, thou canst not then be false to any man.</p>
+                <div class="quote-footer">
+                    <span class="author-name"><a href="https://en.wikipedia.org/wiki/William_Shakespeare" target="_blank">William Shakespeare</a></span>
+                    <span class="work-title">Hamlet</span>
+                </div>
+            </div>
+
+            <div class="quote-card">
+                <p class="quote-text">Suspicion always haunts the guilty mind.</p>
+                <div class="quote-footer">
+                    <span class="author-name"><a href="https://en.wikipedia.org/wiki/William_Shakespeare" target="_blank">William Shakespeare</a></span>
+                    <span class="work-title">Henry VI, Part 3</span>
+                </div>
+            </div>
+
+            <div class="quote-card">
+                <p class="quote-text">Brevity is the soul of wit.</p>
+                <div class="quote-footer">
+                    <span class="author-name"><a href="https://en.wikipedia.org/wiki/William_Shakespeare" target="_blank">William Shakespeare</a></span>
+                    <span class="work-title">Hamlet</span>
+                </div>
+            </div>
+
+            <div class="quote-card">
+                <p class="quote-text">A horse! a horse! my kingdom for a horse!</p>
+                <div class="quote-footer">
+                    <span class="author-name"><a href="https://en.wikipedia.org/wiki/William_Shakespeare" target="_blank">William Shakespeare</a></span>
+                    <span class="work-title">Richard III</span>
+                </div>
+            </div>
+
+            <div class="quote-card">
+                <p class="quote-text">Who ever loved that loved not at first sight?</p>
+                <div class="quote-footer">
+                    <span class="author-name"><a href="https://en.wikipedia.org/wiki/Christopher_Marlowe" target="_blank">Christopher Marlowe</a></span>
+                    <span class="work-title">Hero and Leander</span>
+                </div>
+            </div>
+
+            <div class="quote-card">
+                <p class="quote-text">Was this the face that launch'd a thousand ships / And burnt the topless towers of Ilium?</p>
+                <div class="quote-footer">
+                    <span class="author-name"><a href="https://en.wikipedia.org/wiki/Christopher_Marlowe" target="_blank">Christopher Marlowe</a></span>
+                    <span class="work-title">Doctor Faustus</span>
+                </div>
+            </div>
+
+            <div class="quote-card">
+                <p class="quote-text">No man is an island, entire of itself; every man is a piece of the continent, a part of the main.</p>
+                <div class="quote-footer">
+                    <span class="author-name"><a href="https://en.wikipedia.org/wiki/John_Donne" target="_blank">John Donne</a></span>
+                    <span class="work-title">Devotions upon Emergent Occasions</span>
+                </div>
+            </div>
+
+            <div class="quote-card">
+                <p class="quote-text">Death, be not proud, though some have called thee / Mighty and dreadful, for, thou art not so.</p>
+                <div class="quote-footer">
+                    <span class="author-name"><a href="https://en.wikipedia.org/wiki/John_Donne" target="_blank">John Donne</a></span>
+                    <span class="work-title">Holy Sonnet X</span>
+                </div>
+            </div>
+
+            <div class="quote-card">
+                <p class="quote-text">For God's sake hold your tongue, and let me love.</p>
+                <div class="quote-footer">
+                    <span class="author-name"><a href="https://en.wikipedia.org/wiki/John_Donne" target="_blank">John Donne</a></span>
+                    <span class="work-title">The Canonization</span>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Section 2: The Romantic & Regency Era -->
+        <div class="era-title">2. The Romantic & Regency Era</div>
+        <div class="quotes-grid">
+
+            <div class="quote-card">
+                <p class="quote-text">Better to reign in hell, than serve in heaven.</p>
+                <div class="quote-footer">
+                    <span class="author-name"><a href="https://en.wikipedia.org/wiki/John_Milton" target="_blank">John Milton</a></span>
+                    <span class="work-title">Paradise Lost</span>
+                </div>
+            </div>
+
+            <div class="quote-card">
+                <p class="quote-text">The mind is its own place, and in itself can make a heaven of hell, a hell of heaven.</p>
+                <div class="quote-footer">
+                    <span class="author-name"><a href="https://en.wikipedia.org/wiki/John_Milton" target="_blank">John Milton</a></span>
+                    <span class="work-title">Paradise Lost</span>
+                </div>
+            </div>
+
+            <div class="quote-card">
+                <p class="quote-text">Awake, arise, or be for ever fall'n!</p>
+                <div class="quote-footer">
+                    <span class="author-name"><a href="https://en.wikipedia.org/wiki/John_Milton" target="_blank">John Milton</a></span>
+                    <span class="work-title">Paradise Lost</span>
+                </div>
+            </div>
+
+            <div class="quote-card">
+                <p class="quote-text">They also serve who only stand and wait.</p>
+                <div class="quote-footer">
+                    <span class="author-name"><a href="https://en.wikipedia.org/wiki/John_Milton" target="_blank">John Milton</a></span>
+                    <span class="work-title">When I Consider How My Light is Spent</span>
+                </div>
+            </div>
+
+            <div class="quote-card">
+                <p class="quote-text">Fame is the spur that the clear spirit doth raise / (That last infirmity of noble mind) / To scorn delights, and live laborious days.</p>
+                <div class="quote-footer">
+                    <span class="author-name"><a href="https://en.wikipedia.org/wiki/John_Milton" target="_blank">John Milton</a></span>
+                    <span class="work-title">Lycidas</span>
+                </div>
+            </div>
+
+            <div class="quote-card">
+                <p class="quote-text">Had we but world enough, and time, this coyness, lady, were no crime.</p>
+                <div class="quote-footer">
+                    <span class="author-name"><a href="https://en.wikipedia.org/wiki/Andrew_Marvell" target="_blank">Andrew Marvell</a></span>
+                    <span class="work-title">To His Coy Mistress</span>
+                </div>
+            </div>
+
+            <div class="quote-card">
+                <p class="quote-text">To err is human, to forgive divine.</p>
+                <div class="quote-footer">
+                    <span class="author-name"><a href="https://en.wikipedia.org/wiki/Alexander_Pope" target="_blank">Alexander Pope</a></span>
+                    <span class="work-title">An Essay on Criticism</span>
+                </div>
+            </div>
+
+            <div class="quote-card">
+                <p class="quote-text">A little learning is a dang'rous thing; drink deep, or taste not the Pierian spring.</p>
+                <div class="quote-footer">
+                    <span class="author-name"><a href="https://en.wikipedia.org/wiki/Alexander_Pope" target="_blank">Alexander Pope</a></span>
+                    <span class="work-title">An Essay on Criticism</span>
+                </div>
+            </div>
+
+            <div class="quote-card">
+                <p class="quote-text">Fools rush in where angels fear to tread.</p>
+                <div class="quote-footer">
+                    <span class="author-name"><a href="https://en.wikipedia.org/wiki/Alexander_Pope" target="_blank">Alexander Pope</a></span>
+                    <span class="work-title">An Essay on Criticism</span>
+                </div>
+            </div>
+
+            <div class="quote-card">
+                <p class="quote-text">Hope springs eternal in the human breast: man never is, but always to be blest.</p>
+                <div class="quote-footer">
+                    <span class="author-name"><a href="https://en.wikipedia.org/wiki/Alexander_Pope" target="_blank">Alexander Pope</a></span>
+                    <span class="work-title">An Essay on Man</span>
+                </div>
+            </div>
+
+            <div class="quote-card">
+                <p class="quote-text">An honest man's the noblest work of God.</p>
+                <div class="quote-footer">
+                    <span class="author-name"><a href="https://en.wikipedia.org/wiki/Alexander_Pope" target="_blank">Alexander Pope</a></span>
+                    <span class="work-title">An Essay on Man</span>
+                </div>
+            </div>
+
+            <div class="quote-card">
+                <p class="quote-text">Water, water, every where, nor any drop to drink.</p>
+                <div class="quote-footer">
+                    <span class="author-name"><a href="https://en.wikipedia.org/wiki/Samuel_Taylor_Coleridge" target="_blank">Samuel Taylor Coleridge</a></span>
+                    <span class="work-title">The Rime of the Ancient Mariner</span>
+                </div>
+            </div>
+
+            <div class="quote-card">
+                <p class="quote-text">He prayeth best, who loveth best all things both great and small.</p>
+                <div class="quote-footer">
+                    <span class="author-name"><a href="https://en.wikipedia.org/wiki/Samuel_Taylor_Coleridge" target="_blank">Samuel Taylor Coleridge</a></span>
+                    <span class="work-title">The Rime of the Ancient Mariner</span>
+                </div>
+            </div>
+
+            <div class="quote-card">
+                <p class="quote-text">In Xanadu did Kubla Khan a stately pleasure-dome decree.</p>
+                <div class="quote-footer">
+                    <span class="author-name"><a href="https://en.wikipedia.org/wiki/Samuel_Taylor_Coleridge" target="_blank">Samuel Taylor Coleridge</a></span>
+                    <span class="work-title">Kubla Khan</span>
+                </div>
+            </div>
+
+            <div class="quote-card">
+                <p class="quote-text">The child is father of the man.</p>
+                <div class="quote-footer">
+                    <span class="author-name"><a href="https://en.wikipedia.org/wiki/William_Wordsworth" target="_blank">William Wordsworth</a></span>
+                    <span class="work-title">My Heart Leaps Up</span>
+                </div>
+            </div>
+
+            <div class="quote-card">
+                <p class="quote-text">I wandered lonely as a cloud that floats on high o'er vales and hills.</p>
+                <div class="quote-footer">
+                    <span class="author-name"><a href="https://en.wikipedia.org/wiki/William_Wordsworth" target="_blank">William Wordsworth</a></span>
+                    <span class="work-title">I Wandered Lonely as a Cloud</span>
+                </div>
+            </div>
+
+            <div class="quote-card">
+                <p class="quote-text">To me the meanest flower that blows can give thoughts that do often lie too deep for tears.</p>
+                <div class="quote-footer">
+                    <span class="author-name"><a href="https://en.wikipedia.org/wiki/William_Wordsworth" target="_blank">William Wordsworth</a></span>
+                    <span class="work-title">Ode: Intimations of Immortality</span>
+                </div>
+            </div>
+
+            <div class="quote-card">
+                <p class="quote-text">Bliss was it in that dawn to be alive, but to be young was very heaven!</p>
+                <div class="quote-footer">
+                    <span class="author-name"><a href="https://en.wikipedia.org/wiki/William_Wordsworth" target="_blank">William Wordsworth</a></span>
+                    <span class="work-title">The Prelude</span>
+                </div>
+            </div>
+
+            <div class="quote-card">
+                <p class="quote-text">Beauty is truth, truth beauty,—that is all ye know on earth, and all ye need to know.</p>
+                <div class="quote-footer">
+                    <span class="author-name"><a href="https://en.wikipedia.org/wiki/John_Keats" target="_blank">John Keats</a></span>
+                    <span class="work-title">Ode on a Grecian Urn</span>
+                </div>
+            </div>
+
+            <div class="quote-card">
+                <p class="quote-text">A thing of beauty is a joy for ever.</p>
+                <div class="quote-footer">
+                    <span class="author-name"><a href="https://en.wikipedia.org/wiki/John_Keats" target="_blank">John Keats</a></span>
+                    <span class="work-title">Endymion</span>
+                </div>
+            </div>
+
+            <div class="quote-card">
+                <p class="quote-text">Season of mists and mellow fruitfulness...</p>
+                <div class="quote-footer">
+                    <span class="author-name"><a href="https://en.wikipedia.org/wiki/John_Keats" target="_blank">John Keats</a></span>
+                    <span class="work-title">To Autumn</span>
+                </div>
+            </div>
+
+            <div class="quote-card">
+                <p class="quote-text">If Winter comes, can Spring be far behind?</p>
+                <div class="quote-footer">
+                    <span class="author-name"><a href="https://en.wikipedia.org/wiki/Percy_Bysshe_Shelley" target="_blank">Percy Bysshe Shelley</a></span>
+                    <span class="work-title">Ode to the West Wind</span>
+                </div>
+            </div>
+
+            <div class="quote-card">
+                <p class="quote-text">My name is Ozymandias, King of Kings: Look on my works, ye Mighty, and despair!</p>
+                <div class="quote-footer">
+                    <span class="author-name"><a href="https://en.wikipedia.org/wiki/Percy_Bysshe_Shelley" target="_blank">Percy Bysshe Shelley</a></span>
+                    <span class="work-title">Ozymandias</span>
+                </div>
+            </div>
+
+            <div class="quote-card">
+                <p class="quote-text">She walks in beauty, like the night of cloudless climes and starry skies.</p>
+                <div class="quote-footer">
+                    <span class="author-name"><a href="https://en.wikipedia.org/wiki/Lord_Byron" target="_blank">Lord Byron</a></span>
+                    <span class="work-title">She Walks in Beauty</span>
+                </div>
+            </div>
+
+            <div class="quote-card">
+                <p class="quote-text">To see a World in a Grain of Sand / And a Heaven in a Wild Flower.</p>
+                <div class="quote-footer">
+                    <span class="author-name"><a href="https://en.wikipedia.org/wiki/William_Blake" target="_blank">William Blake</a></span>
+                    <span class="work-title">Auguries of Innocence</span>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Section 3: The Victorian & Gothic Era -->
+        <div class="era-title">3. The Victorian & Gothic Era</div>
+        <div class="quotes-grid">
+
+            <div class="quote-card">
+                <p class="quote-text">Tyger Tyger, burning bright, in the forests of the night.</p>
+                <div class="quote-footer">
+                    <span class="author-name"><a href="https://en.wikipedia.org/wiki/William_Blake" target="_blank">William Blake</a></span>
+                    <span class="work-title">The Tyger</span>
+                </div>
+            </div>
+
+            <div class="quote-card">
+                <p class="quote-text">It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife.</p>
+                <div class="quote-footer">
+                    <span class="author-name"><a href="https://en.wikipedia.org/wiki/Jane_Austen" target="_blank">Jane Austen</a></span>
+                    <span class="work-title">Pride and Prejudice</span>
+                </div>
+            </div>
+
+            <div class="quote-card">
+                <p class="quote-text">Vanity and pride are different things, though the words are often used synonymously.</p>
+                <div class="quote-footer">
+                    <span class="author-name"><a href="https://en.wikipedia.org/wiki/Jane_Austen" target="_blank">Jane Austen</a></span>
+                    <span class="work-title">Pride and Prejudice</span>
+                </div>
+            </div>
+
+            <div class="quote-card">
+                <p class="quote-text">There is no charm equal to tenderness of heart.</p>
+                <div class="quote-footer">
+                    <span class="author-name"><a href="https://en.wikipedia.org/wiki/Jane_Austen" target="_blank">Jane Austen</a></span>
+                    <span class="work-title">Emma</span>
+                </div>
+            </div>
+
+            <div class="quote-card">
+                <p class="quote-text">Beware; for I am fearless, and therefore powerful.</p>
+                <div class="quote-footer">
+                    <span class="author-name"><a href="https://en.wikipedia.org/wiki/Mary_Shelley" target="_blank">Mary Shelley</a></span>
+                    <span class="work-title">Frankenstein</span>
+                </div>
+            </div>
+
+            <div class="quote-card">
+                <p class="quote-text">It was the best of times, it was the worst of times...</p>
+                <div class="quote-footer">
+                    <span class="author-name"><a href="https://en.wikipedia.org/wiki/Charles_Dickens" target="_blank">Charles Dickens</a></span>
+                    <span class="work-title">A Tale of Two Cities</span>
+                </div>
+            </div>
+
+            <div class="quote-card">
+                <p class="quote-text">Please, sir, I want some more.</p>
+                <div class="quote-footer">
+                    <span class="author-name"><a href="https://en.wikipedia.org/wiki/Charles_Dickens" target="_blank">Charles Dickens</a></span>
+                    <span class="work-title">Oliver Twist</span>
+                </div>
+            </div>
+
+            <div class="quote-card">
+                <p class="quote-text">Annual income twenty pounds, annual expenditure nineteen six, result happiness.</p>
+                <div class="quote-footer">
+                    <span class="author-name"><a href="https://en.wikipedia.org/wiki/Charles_Dickens" target="_blank">Charles Dickens</a></span>
+                    <span class="work-title">David Copperfield</span>
+                </div>
+            </div>
+
+            <div class="quote-card">
+                <p class="quote-text">Whatever our souls are made of, his and mine are the same.</p>
+                <div class="quote-footer">
+                    <span class="author-name"><a href="https://en.wikipedia.org/wiki/Emily_Bront%C3%AB" target="_blank">Emily Brontë</a></span>
+                    <span class="work-title">Wuthering Heights</span>
+                </div>
+            </div>
+
+            <div class="quote-card">
+                <p class="quote-text">I am no bird; and no net ensnares me; I am a free human being with an independent will.</p>
+                <div class="quote-footer">
+                    <span class="author-name"><a href="https://en.wikipedia.org/wiki/Charlotte_Bront%C3%AB" target="_blank">Charlotte Brontë</a></span>
+                    <span class="work-title">Jane Eyre</span>
+                </div>
+            </div>
+
+            <div class="quote-card">
+                <p class="quote-text">Life appears to me too short to be spent in nursing animosity or registering wrongs.</p>
+                <div class="quote-footer">
+                    <span class="author-name"><a href="https://en.wikipedia.org/wiki/Charlotte_Bront%C3%AB" target="_blank">Charlotte Brontë</a></span>
+                    <span class="work-title">Jane Eyre</span>
+                </div>
+            </div>
+
+            <div class="quote-card">
+                <p class="quote-text">Be yourself; everyone else is already taken.</p>
+                <div class="quote-footer">
+                    <span class="author-name"><a href="https://en.wikipedia.org/wiki/Oscar_Wilde" target="_blank">Oscar Wilde</a></span>
+                    <span class="work-title">De Profundis</span>
+                </div>
+            </div>
+
+            <div class="quote-card">
+                <p class="quote-text">We are all in the gutter, but some of us are looking at the stars.</p>
+                <div class="quote-footer">
+                    <span class="author-name"><a href="https://en.wikipedia.org/wiki/Oscar_Wilde" target="_blank">Oscar Wilde</a></span>
+                    <span class="work-title">Lady Windermere's Fan</span>
+                </div>
+            </div>
+
+            <div class="quote-card">
+                <p class="quote-text">Experience is simply the name we give our mistakes.</p>
+                <div class="quote-footer">
+                    <span class="author-name"><a href="https://en.wikipedia.org/wiki/Oscar_Wilde" target="_blank">Oscar Wilde</a></span>
+                    <span class="work-title">The Picture of Dorian Gray</span>
+                </div>
+            </div>
+
+            <div class="quote-card">
+                <p class="quote-text">To love oneself is the beginning of a lifelong romance.</p>
+                <div class="quote-footer">
+                    <span class="author-name"><a href="https://en.wikipedia.org/wiki/Oscar_Wilde" target="_blank">Oscar Wilde</a></span>
+                    <span class="work-title">An Ideal Husband</span>
+                </div>
+            </div>
+
+            <div class="quote-card">
+                <p class="quote-text">Elementary, my dear Watson.</p>
+                <div class="quote-footer">
+                    <span class="author-name"><a href="https://en.wikipedia.org/wiki/Arthur_Conan_Doyle" target="_blank">Arthur Conan Doyle</a></span>
+                    <span class="work-title">The Adventures of Sherlock Holmes</span>
+                </div>
+            </div>
+
+            <div class="quote-card">
+                <p class="quote-text">When you have eliminated the impossible, whatever remains, however improbable, must be the truth.</p>
+                <div class="quote-footer">
+                    <span class="author-name"><a href="https://en.wikipedia.org/wiki/Arthur_Conan_Doyle" target="_blank">Arthur Conan Doyle</a></span>
+                    <span class="work-title">The Sign of the Four</span>
+                </div>
+            </div>
+
+            <div class="quote-card">
+                <p class="quote-text">Curiouser and curiouser!</p>
+                <div class="quote-footer">
+                    <span class="author-name"><a href="https://en.wikipedia.org/wiki/Lewis_Carroll" target="_blank">Lewis Carroll</a></span>
+                    <span class="work-title">Alice's Adventures in Wonderland</span>
+                </div>
+            </div>
+
+            <div class="quote-card">
+                <p class="quote-text">We're all mad here.</p>
+                <div class="quote-footer">
+                    <span class="author-name"><a href="https://en.wikipedia.org/wiki/Lewis_Carroll" target="_blank">Lewis Carroll</a></span>
+                    <span class="work-title">Alice's Adventures in Wonderland</span>
+                </div>
+            </div>
+
+            <div class="quote-card">
+                <p class="quote-text">Youth is wasted on the young.</p>
+                <div class="quote-footer">
+                    <span class="author-name"><a href="https://en.wikipedia.org/wiki/George_Bernard_Shaw" target="_blank">George Bernard Shaw</a></span>
+                    <span class="work-title">Man and Superman</span>
+                </div>
+            </div>
+
+            <div class="quote-card">
+                <p class="quote-text">Life isn't about finding yourself. Life is about creating yourself.</p>
+                <div class="quote-footer">
+                    <span class="author-name"><a href="https://en.wikipedia.org/wiki/George_Bernard_Shaw" target="_blank">George Bernard Shaw</a></span>
+                    <span class="work-title">Back to Methuselah</span>
+                </div>
+            </div>
+
+            <div class="quote-card">
+                <p class="quote-text">Man is least himself when he talks in his own person. Give him a mask, and he will tell you the truth.</p>
+                <div class="quote-footer">
+                    <span class="author-name"><a href="https://en.wikipedia.org/wiki/Oscar_Wilde" target="_blank">Oscar Wilde</a></span>
+                    <span class="work-title">Intentions</span>
+                </div>
+            </div>
+
+            <div class="quote-card">
+                <p class="quote-text">Time flies over us, but leaves its shadow behind.</p>
+                <div class="quote-footer">
+                    <span class="author-name"><a href="https://en.wikipedia.org/wiki/Nathaniel_Hawthorne" target="_blank">Nathaniel Hawthorne</a></span>
+                    <span class="work-title">The Marble Faun</span>
+                </div>
+            </div>
+
+            <div class="quote-card">
+                <p class="quote-text">If you look the right way, you can see that the whole world is a garden.</p>
+                <div class="quote-footer">
+                    <span class="author-name"><a href="https://en.wikipedia.org/wiki/Frances_Hodgson_Burnett" target="_blank">Frances Hodgson Burnett</a></span>
+                    <span class="work-title">The Secret Garden</span>
+                </div>
+            </div>
+
+            <div class="quote-card">
+                <p class="quote-text">There is no greater agony than bearing an untold story inside you.</p>
+                <div class="quote-footer">
+                    <span class="author-name"><a href="https://en.wikipedia.org/wiki/Maya_Angelou" target="_blank">Maya Angelou</a></span>
+                    <span class="work-title">I Know Why the Caged Bird Sings</span>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Section 4: The Modern & 20th Century Era -->
+        <div class="era-title">4. The Modern & 20th Century Era</div>
+        <div class="quotes-grid">
+
+            <div class="quote-card">
+                <p class="quote-text">A woman must have money and a room of her own if she is to write fiction.</p>
+                <div class="quote-footer">
+                    <span class="author-name"><a href="https://en.wikipedia.org/wiki/Virginia_Woolf" target="_blank">Virginia Woolf</a></span>
+                    <span class="work-title">A Room of One's Own</span>
+                </div>
+            </div>
+
+            <div class="quote-card">
+                <p class="quote-text">Lock up your libraries if you like; but there is no gate, no lock, no bolt that you can set upon the freedom of my mind.</p>
+                <div class="quote-footer">
+                    <span class="author-name"><a href="https://en.wikipedia.org/wiki/Virginia_Woolf" target="_blank">Virginia Woolf</a></span>
+                    <span class="work-title">A Room of One's Own</span>
+                </div>
+            </div>
+
+            <div class="quote-card">
+                <p class="quote-text">Freedom is the freedom to say that two plus two make four. If that is granted, all else follows.</p>
+                <div class="quote-footer">
+                    <span class="author-name"><a href="https://en.wikipedia.org/wiki/George_Orwell" target="_blank">George Orwell</a></span>
+                    <span class="work-title">1984</span>
+                </div>
+            </div>
+
+            <div class="quote-card">
+                <p class="quote-text">Big Brother is watching you.</p>
+                <div class="quote-footer">
+                    <span class="author-name"><a href="https://en.wikipedia.org/wiki/George_Orwell" target="_blank">George Orwell</a></span>
+                    <span class="work-title">1984</span>
+                </div>
+            </div>
+
+            <div class="quote-card">
+                <p class="quote-text">Who controls the past controls the future. Who controls the present controls the past.</p>
+                <div class="quote-footer">
+                    <span class="author-name"><a href="https://en.wikipedia.org/wiki/George_Orwell" target="_blank">George Orwell</a></span>
+                    <span class="work-title">1984</span>
+                </div>
+            </div>
+
+            <div class="quote-card">
+                <p class="quote-text">All animals are equal, but some animals are more equal than others.</p>
+                <div class="quote-footer">
+                    <span class="author-name"><a href="https://en.wikipedia.org/wiki/George_Orwell" target="_blank">George Orwell</a></span>
+                    <span class="work-title">Animal Farm</span>
+                </div>
+            </div>
+
+            <div class="quote-card">
+                <p class="quote-text">In a time of deceit telling the truth is a revolutionary act.</p>
+                <div class="quote-footer">
+                    <span class="author-name"><a href="https://en.wikipedia.org/wiki/George_Orwell" target="_blank">George Orwell</a></span>
+                    <span class="work-title">Attributed</span>
+                </div>
+            </div>
+
+            <div class="quote-card">
+                <p class="quote-text">April is the cruellest month, breeding lilacs out of the dead land.</p>
+                <div class="quote-footer">
+                    <span class="author-name"><a href="https://en.wikipedia.org/wiki/T._S._Eliot" target="_blank">T.S. Eliot</a></span>
+                    <span class="work-title">The Waste Land</span>
+                </div>
+            </div>
+
+            <div class="quote-card">
+                <p class="quote-text">I have measured out my life with coffee spoons.</p>
+                <div class="quote-footer">
+                    <span class="author-name"><a href="https://en.wikipedia.org/wiki/T._S._Eliot" target="_blank">T.S. Eliot</a></span>
+                    <span class="work-title">The Love Song of J. Alfred Prufrock</span>
+                </div>
+            </div>
+
+            <div class="quote-card">
+                <p class="quote-text">This is the way the world ends not with a bang but a whimper.</p>
+                <div class="quote-footer">
+                    <span class="author-name"><a href="https://en.wikipedia.org/wiki/T._S._Eliot" target="_blank">T.S. Eliot</a></span>
+                    <span class="work-title">The Hollow Men</span>
+                </div>
+            </div>
+
+            <div class="quote-card">
+                <p class="quote-text">History is a nightmare from which I am trying to awake.</p>
+                <div class="quote-footer">
+                    <span class="author-name"><a href="https://en.wikipedia.org/wiki/James_Joyce" target="_blank">James Joyce</a></span>
+                    <span class="work-title">Ulysses</span>
+                </div>
+            </div>
+
+            <div class="quote-card">
+                <p class="quote-text">Words are, of course, the most powerful drug used by mankind.</p>
+                <div class="quote-footer">
+                    <span class="author-name"><a href="https://en.wikipedia.org/wiki/Rudyard_Kipling" target="_blank">Rudyard Kipling</a></span>
+                    <span class="work-title">Speech</span>
+                </div>
+            </div>
+
+            <div class="quote-card">
+                <p class="quote-text">Not all those who wander are lost.</p>
+                <div class="quote-footer">
+                    <span class="author-name"><a href="https://en.wikipedia.org/wiki/J._R._R._Tolkien" target="_blank">J.R.R. Tolkien</a></span>
+                    <span class="work-title">The Fellowship of the Ring</span>
+                </div>
+            </div>
+
+            <div class="quote-card">
+                <p class="quote-text">Even the smallest person can change the course of the future.</p>
+                <div class="quote-footer">
+                    <span class="author-name"><a href="https://en.wikipedia.org/wiki/J._R._R._Tolkien" target="_blank">J.R.R. Tolkien</a></span>
+                    <span class="work-title">The Fellowship of the Ring</span>
+                </div>
+            </div>
+
+            <div class="quote-card">
+                <p class="quote-text">Faith is the bird that feels the light when the dawn is still dark.</p>
+                <div class="quote-footer">
+                    <span class="author-name"><a href="https://en.wikipedia.org/wiki/Rabindranath_Tagore" target="_blank">Rabindranath Tagore</a></span>
+                    <span class="work-title">Stray Birds</span>
+                </div>
+            </div>
+
+            <div class="quote-card">
+                <p class="quote-text">Words are pale shadows of forgotten names.</p>
+                <div class="quote-footer">
+                    <span class="author-name"><a href="https://en.wikipedia.org/wiki/C._S._Lewis" target="_blank">C.S. Lewis</a></span>
+                    <span class="work-title">The Last Battle</span>
+                </div>
+            </div>
+
+            <div class="quote-card">
+                <p class="quote-text">You can never get a cup of tea large enough or a book long enough to suit me.</p>
+                <div class="quote-footer">
+                    <span class="author-name"><a href="https://en.wikipedia.org/wiki/C._S._Lewis" target="_blank">C.S. Lewis</a></span>
+                    <span class="work-title">Letters</span>
+                </div>
+            </div>
+
+            <div class="quote-card">
+                <p class="quote-text">All we have to decide is what to do with the time that is given us.</p>
+                <div class="quote-footer">
+                    <span class="author-name"><a href="https://en.wikipedia.org/wiki/J._R._R._Tolkien" target="_blank">J.R.R. Tolkien</a></span>
+                    <span class="work-title">The Fellowship of the Ring</span>
+                </div>
+            </div>
+
+            <div class="quote-card">
+                <p class="quote-text">Reality leaves a lot to the imagination.</p>
+                <div class="quote-footer">
+                    <span class="author-name"><a href="https://en.wikipedia.org/wiki/Lewis_Carroll" target="_blank">Lewis Carroll</a></span>
+                    <span class="work-title">Attributed</span>
+                </div>
+            </div>
+
+            <div class="quote-card">
+                <p class="quote-text">We read to know we are not alone.</p>
+                <div class="quote-footer">
+                    <span class="author-name"><a href="https://en.wikipedia.org/wiki/C._S._Lewis" target="_blank">C.S. Lewis</a></span>
+                    <span class="work-title">Shadowlands</span>
+                </div>
+            </div>
+
+            <div class="quote-card">
+                <p class="quote-text">The future belongs to those who believe in the beauty of their dreams.</p>
+                <div class="quote-footer">
+                    <span class="author-name"><a href="https://en.wikipedia.org/wiki/Eleanor_Roosevelt" target="_blank">Eleanor Roosevelt</a></span>
+                    <span class="work-title">Quotations</span>
+                </div>
+            </div>
+
+            <div class="quote-card">
+                <p class="quote-text">Everything is funny, if you can only laugh at it.</p>
+                <div class="quote-footer">
+                    <span class="author-name"><a href="https://en.wikipedia.org/wiki/George_Bernard_Shaw" target="_blank">George Bernard Shaw</a></span>
+                    <span class="work-title">John Bull's Other Island</span>
+                </div>
+            </div>
+
+            <div class="quote-card">
+                <p class="quote-text">Life is like riding a bicycle. To keep your balance, you must keep moving.</p>
+                <div class="quote-footer">
+                    <span class="author-name"><a href="https://en.wikipedia.org/wiki/Albert_Einstein" target="_blank">Albert Einstein</a></span>
+                    <span class="work-title">Letters to his son</span>
+                </div>
+            </div>
+
+            <div class="quote-card">
+                <p class="quote-text">There is no substitute for hard work.</p>
+                <div class="quote-footer">
+                    <span class="author-name"><a href="https://en.wikipedia.org/wiki/Thomas_Edison" target="_blank">Thomas Edison</a></span>
+                    <span class="work-title">Interviews</span>
+                </div>
+            </div>
+
+            <div class="quote-card">
+                <p class="quote-text">In three words I can sum up everything I've learned about life: it goes on.</p>
+                <div class="quote-footer">
+                    <span class="author-name"><a href="https://en.wikipedia.org/wiki/Robert_Frost" target="_blank">Robert Frost</a></span>
+                    <span class="work-title">Literary Quote</span>
+                </div>
+            </div>
+
         </div>
     </div>
 
     <footer>
         <p>&copy; 2026 English Literature Website | Compiled with classic literary heritage.</p>
-        <p><a href=\"index.html\">Return to Homepage</a></p>
+        <p><a href="index.html">Return to Homepage</a></p>
     </footer>
 
 </body>
